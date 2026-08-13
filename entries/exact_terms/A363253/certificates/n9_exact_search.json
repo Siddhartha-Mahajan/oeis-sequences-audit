@@ -1,0 +1,96 @@
+{
+  "sides": 9,
+  "status": "found",
+  "index": 17,
+  "value": 969,
+  "representations": 9,
+  "checked_through_index": 17,
+  "checked": [
+    {
+      "index": 1,
+      "value": 1,
+      "count": 1
+    },
+    {
+      "index": 2,
+      "value": 9,
+      "count": 1
+    },
+    {
+      "index": 3,
+      "value": 24,
+      "count": 1
+    },
+    {
+      "index": 4,
+      "value": 46,
+      "count": 1
+    },
+    {
+      "index": 5,
+      "value": 75,
+      "count": 1
+    },
+    {
+      "index": 6,
+      "value": 111,
+      "count": 1
+    },
+    {
+      "index": 7,
+      "value": 154,
+      "count": 2
+    },
+    {
+      "index": 8,
+      "value": 204,
+      "count": 1
+    },
+    {
+      "index": 9,
+      "value": 261,
+      "count": 1
+    },
+    {
+      "index": 10,
+      "value": 325,
+      "count": 3
+    },
+    {
+      "index": 11,
+      "value": 396,
+      "count": 4
+    },
+    {
+      "index": 12,
+      "value": 474,
+      "count": 2
+    },
+    {
+      "index": 13,
+      "value": 559,
+      "count": 5
+    },
+    {
+      "index": 14,
+      "value": 651,
+      "count": 3
+    },
+    {
+      "index": 15,
+      "value": 750,
+      "count": 6
+    },
+    {
+      "index": 16,
+      "value": 856,
+      "count": 7
+    },
+    {
+      "index": 17,
+      "value": 969,
+      "count": 9
+    }
+  ],
+  "trace_sha256": "1b747ace6c422b98484a442e9ebd5285af87c737e105a6b8cb4ee5b3a00e0952"
+}

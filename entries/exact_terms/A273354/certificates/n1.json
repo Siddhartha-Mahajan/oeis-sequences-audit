@@ -1,0 +1,10 @@
+{
+  "target_multiplicity": 1,
+  "status": "found",
+  "value": 2,
+  "max_sum": 100,
+  "max_first_cube_index": 3,
+  "distinct_cube_sums_examined": 1,
+  "cube_pairs_examined": 1,
+  "cube_groups_of_target_size_tested": 1
+}

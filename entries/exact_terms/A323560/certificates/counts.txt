@@ -1,0 +1,8 @@
+n=15 count=1728
+n=16 count=10368
+n=17 count=332660
+n=18 count=1952452
+n=19 count=36001752
+
+The first four lines reproduce the OEIS terms. The fifth is the new exact
+term produced by the same exhaustive program.

@@ -1,0 +1,3534 @@
+{
+  "sequence": "A003167",
+  "n": 7,
+  "a_n": 155068098,
+  "branch_count": 262,
+  "partition": {
+    "first_denominator": "x=4..14, with x=3 refined",
+    "after_3": "y=8..36, with y=7 refined",
+    "after_3_7": "z=44..210, with z=43 refined",
+    "after_3_7_43": "w=1807..7224 in consecutive disjoint ranges"
+  },
+  "branches": [
+    {
+      "branch": "x4",
+      "arguments": [
+        7,
+        4
+      ],
+      "count": 18856875,
+      "search_nodes": 7451713,
+      "pair_calls": 7434514,
+      "maximum_terminal_denominator": 93795760380
+    },
+    {
+      "branch": "x5",
+      "arguments": [
+        7,
+        5
+      ],
+      "count": 2961101,
+      "search_nodes": 826888,
+      "pair_calls": 821368,
+      "maximum_terminal_denominator": 632476680
+    },
+    {
+      "branch": "x6",
+      "arguments": [
+        7,
+        6
+      ],
+      "count": 300095,
+      "search_nodes": 76660,
+      "pair_calls": 74771,
+      "maximum_terminal_denominator": 9783102
+    },
+    {
+      "branch": "x7",
+      "arguments": [
+        7,
+        7
+      ],
+      "count": 46925,
+      "search_nodes": 14881,
+      "pair_calls": 14038,
+      "maximum_terminal_denominator": 881790
+    },
+    {
+      "branch": "x8",
+      "arguments": [
+        7,
+        8
+      ],
+      "count": 9426,
+      "search_nodes": 4215,
+      "pair_calls": 3784,
+      "maximum_terminal_denominator": 369512
+    },
+    {
+      "branch": "x9",
+      "arguments": [
+        7,
+        9
+      ],
+      "count": 1677,
+      "search_nodes": 1483,
+      "pair_calls": 1254,
+      "maximum_terminal_denominator": 350064
+    },
+    {
+      "branch": "x10",
+      "arguments": [
+        7,
+        10
+      ],
+      "count": 336,
+      "search_nodes": 564,
+      "pair_calls": 443,
+      "maximum_terminal_denominator": 194480
+    },
+    {
+      "branch": "x11",
+      "arguments": [
+        7,
+        11
+      ],
+      "count": 29,
+      "search_nodes": 201,
+      "pair_calls": 142,
+      "maximum_terminal_denominator": 72930
+    },
+    {
+      "branch": "x12",
+      "arguments": [
+        7,
+        12
+      ],
+      "count": 23,
+      "search_nodes": 67,
+      "pair_calls": 40,
+      "maximum_terminal_denominator": 4368
+    },
+    {
+      "branch": "x13",
+      "arguments": [
+        7,
+        13
+      ],
+      "count": 1,
+      "search_nodes": 17,
+      "pair_calls": 7,
+      "maximum_terminal_denominator": 1365
+    },
+    {
+      "branch": "x14",
+      "arguments": [
+        7,
+        14
+      ],
+      "count": 1,
+      "search_nodes": 5,
+      "pair_calls": 1,
+      "maximum_terminal_denominator": 7
+    },
+    {
+      "branch": "x3_y8",
+      "arguments": [
+        7,
+        3,
+        8
+      ],
+      "count": 20475988,
+      "search_nodes": 12265678,
+      "pair_calls": 12253301,
+      "maximum_terminal_denominator": 390096719400
+    },
+    {
+      "branch": "x3_y9",
+      "arguments": [
+        7,
+        3,
+        9
+      ],
+      "count": 7206023,
+      "search_nodes": 3918167,
+      "pair_calls": 3911465,
+      "maximum_terminal_denominator": 41281975602
+    },
+    {
+      "branch": "x3_y10",
+      "arguments": [
+        7,
+        3,
+        10
+      ],
+      "count": 5071203,
+      "search_nodes": 1886256,
+      "pair_calls": 1881711,
+      "maximum_terminal_denominator": 10036338960
+    },
+    {
+      "branch": "x3_y11",
+      "arguments": [
+        7,
+        3,
+        11
+      ],
+      "count": 3968774,
+      "search_nodes": 1660570,
+      "pair_calls": 1656903,
+      "maximum_terminal_denominator": 8616253800
+    },
+    {
+      "branch": "x3_y12",
+      "arguments": [
+        7,
+        3,
+        12
+      ],
+      "count": 2104354,
+      "search_nodes": 760310,
+      "pair_calls": 757486,
+      "maximum_terminal_denominator": 1799549700
+    },
+    {
+      "branch": "x3_y13",
+      "arguments": [
+        7,
+        3,
+        13
+      ],
+      "count": 830182,
+      "search_nodes": 329194,
+      "pair_calls": 327153,
+      "maximum_terminal_denominator": 533693394
+    },
+    {
+      "branch": "x3_y14",
+      "arguments": [
+        7,
+        3,
+        14
+      ],
+      "count": 407829,
+      "search_nodes": 124393,
+      "pair_calls": 122912,
+      "maximum_terminal_denominator": 65068752
+    },
+    {
+      "branch": "x3_y15",
+      "arguments": [
+        7,
+        3,
+        15
+      ],
+      "count": 262066,
+      "search_nodes": 74935,
+      "pair_calls": 73771,
+      "maximum_terminal_denominator": 13994640
+    },
+    {
+      "branch": "x3_y16",
+      "arguments": [
+        7,
+        3,
+        16
+      ],
+      "count": 127401,
+      "search_nodes": 47091,
+      "pair_calls": 46153,
+      "maximum_terminal_denominator": 30160176
+    },
+    {
+      "branch": "x3_y17",
+      "arguments": [
+        7,
+        3,
+        17
+      ],
+      "count": 40346,
+      "search_nodes": 31493,
+      "pair_calls": 30722,
+      "maximum_terminal_denominator": 11188074
+    },
+    {
+      "branch": "x3_y18",
+      "arguments": [
+        7,
+        3,
+        18
+      ],
+      "count": 44189,
+      "search_nodes": 20548,
+      "pair_calls": 19904,
+      "maximum_terminal_denominator": 1207260
+    },
+    {
+      "branch": "x3_y19",
+      "arguments": [
+        7,
+        3,
+        19
+      ],
+      "count": 8881,
+      "search_nodes": 13823,
+      "pair_calls": 13291,
+      "maximum_terminal_denominator": 8524578
+    },
+    {
+      "branch": "x3_y20",
+      "arguments": [
+        7,
+        3,
+        20
+      ],
+      "count": 14368,
+      "search_nodes": 9809,
+      "pair_calls": 9363,
+      "maximum_terminal_denominator": 4007220
+    },
+    {
+      "branch": "x3_y21",
+      "arguments": [
+        7,
+        3,
+        21
+      ],
+      "count": 6568,
+      "search_nodes": 7126,
+      "pair_calls": 6752,
+      "maximum_terminal_denominator": 2739702
+    },
+    {
+      "branch": "x3_y22",
+      "arguments": [
+        7,
+        3,
+        22
+      ],
+      "count": 2586,
+      "search_nodes": 5223,
+      "pair_calls": 4911,
+      "maximum_terminal_denominator": 2100120
+    },
+    {
+      "branch": "x3_y23",
+      "arguments": [
+        7,
+        3,
+        23
+      ],
+      "count": 506,
+      "search_nodes": 3838,
+      "pair_calls": 3577,
+      "maximum_terminal_denominator": 7684530
+    },
+    {
+      "branch": "x3_y24",
+      "arguments": [
+        7,
+        3,
+        24
+      ],
+      "count": 1636,
+      "search_nodes": 2811,
+      "pair_calls": 2593,
+      "maximum_terminal_denominator": 473304
+    },
+    {
+      "branch": "x3_y25",
+      "arguments": [
+        7,
+        3,
+        25
+      ],
+      "count": 272,
+      "search_nodes": 2039,
+      "pair_calls": 1862,
+      "maximum_terminal_denominator": 7669050
+    },
+    {
+      "branch": "x3_y26",
+      "arguments": [
+        7,
+        3,
+        26
+      ],
+      "count": 144,
+      "search_nodes": 1464,
+      "pair_calls": 1318,
+      "maximum_terminal_denominator": 2070705
+    },
+    {
+      "branch": "x3_y27",
+      "arguments": [
+        7,
+        3,
+        27
+      ],
+      "count": 149,
+      "search_nodes": 1034,
+      "pair_calls": 917,
+      "maximum_terminal_denominator": 2539458
+    },
+    {
+      "branch": "x3_y28",
+      "arguments": [
+        7,
+        3,
+        28
+      ],
+      "count": 131,
+      "search_nodes": 720,
+      "pair_calls": 626,
+      "maximum_terminal_denominator": 3950268
+    },
+    {
+      "branch": "x3_y29",
+      "arguments": [
+        7,
+        3,
+        29
+      ],
+      "count": 6,
+      "search_nodes": 486,
+      "pair_calls": 414,
+      "maximum_terminal_denominator": 8182698
+    },
+    {
+      "branch": "x3_y30",
+      "arguments": [
+        7,
+        3,
+        30
+      ],
+      "count": 55,
+      "search_nodes": 317,
+      "pair_calls": 262,
+      "maximum_terminal_denominator": 653790
+    },
+    {
+      "branch": "x3_y31",
+      "arguments": [
+        7,
+        3,
+        31
+      ],
+      "count": 1,
+      "search_nodes": 197,
+      "pair_calls": 156,
+      "maximum_terminal_denominator": 3853920
+    },
+    {
+      "branch": "x3_y32",
+      "arguments": [
+        7,
+        3,
+        32
+      ],
+      "count": 8,
+      "search_nodes": 114,
+      "pair_calls": 86,
+      "maximum_terminal_denominator": 2113440
+    },
+    {
+      "branch": "x3_y33",
+      "arguments": [
+        7,
+        3,
+        33
+      ],
+      "count": 3,
+      "search_nodes": 59,
+      "pair_calls": 41,
+      "maximum_terminal_denominator": 512820
+    },
+    {
+      "branch": "x3_y34",
+      "arguments": [
+        7,
+        3,
+        34
+      ],
+      "count": 1,
+      "search_nodes": 28,
+      "pair_calls": 17,
+      "maximum_terminal_denominator": 792540
+    },
+    {
+      "branch": "x3_y35",
+      "arguments": [
+        7,
+        3,
+        35
+      ],
+      "count": 1,
+      "search_nodes": 11,
+      "pair_calls": 5,
+      "maximum_terminal_denominator": 7770
+    },
+    {
+      "branch": "x3_y36",
+      "arguments": [
+        7,
+        3,
+        36
+      ],
+      "count": 1,
+      "search_nodes": 4,
+      "pair_calls": 1,
+      "maximum_terminal_denominator": 18
+    },
+    {
+      "branch": "x3_y7_z44",
+      "arguments": [
+        7,
+        3,
+        7,
+        44
+      ],
+      "count": 23367466,
+      "search_nodes": 17170245,
+      "pair_calls": 17167472,
+      "maximum_terminal_denominator": 2191535415300
+    },
+    {
+      "branch": "x3_y7_z45",
+      "arguments": [
+        7,
+        3,
+        7,
+        45
+      ],
+      "count": 12393653,
+      "search_nodes": 7678634,
+      "pair_calls": 7676743,
+      "maximum_terminal_denominator": 474089905170
+    },
+    {
+      "branch": "x3_y7_z46",
+      "arguments": [
+        7,
+        3,
+        7,
+        46
+      ],
+      "count": 3629214,
+      "search_nodes": 4389697,
+      "pair_calls": 4388247,
+      "maximum_terminal_denominator": 163947810180
+    },
+    {
+      "branch": "x3_y7_z47",
+      "arguments": [
+        7,
+        3,
+        7,
+        47
+      ],
+      "count": 2637609,
+      "search_nodes": 4339688,
+      "pair_calls": 4338502,
+      "maximum_terminal_denominator": 1823935838970
+    },
+    {
+      "branch": "x3_y7_z48",
+      "arguments": [
+        7,
+        3,
+        7,
+        48
+      ],
+      "count": 4038114,
+      "search_nodes": 2042706,
+      "pair_calls": 2041697,
+      "maximum_terminal_denominator": 38464344240
+    },
+    {
+      "branch": "x3_y7_z49",
+      "arguments": [
+        7,
+        3,
+        7,
+        49
+      ],
+      "count": 1878423,
+      "search_nodes": 1540953,
+      "pair_calls": 1540070,
+      "maximum_terminal_denominator": 22566191970
+    },
+    {
+      "branch": "x3_y7_z50",
+      "arguments": [
+        7,
+        3,
+        7,
+        50
+      ],
+      "count": 2488991,
+      "search_nodes": 1404223,
+      "pair_calls": 1403434,
+      "maximum_terminal_denominator": 57193978800
+    },
+    {
+      "branch": "x3_y7_z51",
+      "arguments": [
+        7,
+        3,
+        7,
+        51
+      ],
+      "count": 1346068,
+      "search_nodes": 986032,
+      "pair_calls": 985317,
+      "maximum_terminal_denominator": 9706628890
+    },
+    {
+      "branch": "x3_y7_z52",
+      "arguments": [
+        7,
+        3,
+        7,
+        52
+      ],
+      "count": 1954957,
+      "search_nodes": 914246,
+      "pair_calls": 913590,
+      "maximum_terminal_denominator": 19063842252
+    },
+    {
+      "branch": "x3_y7_z53",
+      "arguments": [
+        7,
+        3,
+        7,
+        53
+      ],
+      "count": 479861,
+      "search_nodes": 768396,
+      "pair_calls": 767788,
+      "maximum_terminal_denominator": 21540144990
+    },
+    {
+      "branch": "x3_y7_z54",
+      "arguments": [
+        7,
+        3,
+        7,
+        54
+      ],
+      "count": 1203293,
+      "search_nodes": 605459,
+      "pair_calls": 604891,
+      "maximum_terminal_denominator": 3868548390
+    },
+    {
+      "branch": "x3_y7_z55",
+      "arguments": [
+        7,
+        3,
+        7,
+        55
+      ],
+      "count": 1401386,
+      "search_nodes": 710486,
+      "pair_calls": 709952,
+      "maximum_terminal_denominator": 31700333280
+    },
+    {
+      "branch": "x3_y7_z56",
+      "arguments": [
+        7,
+        3,
+        7,
+        56
+      ],
+      "count": 1557188,
+      "search_nodes": 471812,
+      "pair_calls": 471307,
+      "maximum_terminal_denominator": 2418288600
+    },
+    {
+      "branch": "x3_y7_z57",
+      "arguments": [
+        7,
+        3,
+        7,
+        57
+      ],
+      "count": 1260718,
+      "search_nodes": 524488,
+      "pair_calls": 524008,
+      "maximum_terminal_denominator": 12226572960
+    },
+    {
+      "branch": "x3_y7_z58",
+      "arguments": [
+        7,
+        3,
+        7,
+        58
+      ],
+      "count": 475287,
+      "search_nodes": 406619,
+      "pair_calls": 406161,
+      "maximum_terminal_denominator": 2893953384
+    },
+    {
+      "branch": "x3_y7_z59",
+      "arguments": [
+        7,
+        3,
+        7,
+        59
+      ],
+      "count": 231535,
+      "search_nodes": 515918,
+      "pair_calls": 515479,
+      "maximum_terminal_denominator": 24541888980
+    },
+    {
+      "branch": "x3_y7_z60",
+      "arguments": [
+        7,
+        3,
+        7,
+        60
+      ],
+      "count": 1057186,
+      "search_nodes": 320574,
+      "pair_calls": 320153,
+      "maximum_terminal_denominator": 1168983060
+    },
+    {
+      "branch": "x3_y7_z61",
+      "arguments": [
+        7,
+        3,
+        7,
+        61
+      ],
+      "count": 614362,
+      "search_nodes": 518073,
+      "pair_calls": 517667,
+      "maximum_terminal_denominator": 39875237010
+    },
+    {
+      "branch": "x3_y7_z62",
+      "arguments": [
+        7,
+        3,
+        7,
+        62
+      ],
+      "count": 242582,
+      "search_nodes": 288016,
+      "pair_calls": 287625,
+      "maximum_terminal_denominator": 5454402198
+    },
+    {
+      "branch": "x3_y7_z63",
+      "arguments": [
+        7,
+        3,
+        7,
+        63
+      ],
+      "count": 717606,
+      "search_nodes": 256349,
+      "pair_calls": 255970,
+      "maximum_terminal_denominator": 768176010
+    },
+    {
+      "branch": "x3_y7_z64",
+      "arguments": [
+        7,
+        3,
+        7,
+        64
+      ],
+      "count": 366486,
+      "search_nodes": 250534,
+      "pair_calls": 250167,
+      "maximum_terminal_denominator": 2730504000
+    },
+    {
+      "branch": "x3_y7_z65",
+      "arguments": [
+        7,
+        3,
+        7,
+        65
+      ],
+      "count": 1023379,
+      "search_nodes": 306944,
+      "pair_calls": 306587,
+      "maximum_terminal_denominator": 6461617890
+    },
+    {
+      "branch": "x3_y7_z66",
+      "arguments": [
+        7,
+        3,
+        7,
+        66
+      ],
+      "count": 696090,
+      "search_nodes": 250210,
+      "pair_calls": 249862,
+      "maximum_terminal_denominator": 2154050052
+    },
+    {
+      "branch": "x3_y7_z67",
+      "arguments": [
+        7,
+        3,
+        7,
+        67
+      ],
+      "count": 84077,
+      "search_nodes": 245379,
+      "pair_calls": 245040,
+      "maximum_terminal_denominator": 27575081058
+    },
+    {
+      "branch": "x3_y7_z68",
+      "arguments": [
+        7,
+        3,
+        7,
+        68
+      ],
+      "count": 1409762,
+      "search_nodes": 343104,
+      "pair_calls": 342773,
+      "maximum_terminal_denominator": 18505516260
+    },
+    {
+      "branch": "x3_y7_z69",
+      "arguments": [
+        7,
+        3,
+        7,
+        69
+      ],
+      "count": 333643,
+      "search_nodes": 199520,
+      "pair_calls": 199197,
+      "maximum_terminal_denominator": 907010244
+    },
+    {
+      "branch": "x3_y7_z70",
+      "arguments": [
+        7,
+        3,
+        7,
+        70
+      ],
+      "count": 562751,
+      "search_nodes": 174050,
+      "pair_calls": 173734,
+      "maximum_terminal_denominator": 371619570
+    },
+    {
+      "branch": "x3_y7_z71",
+      "arguments": [
+        7,
+        3,
+        7,
+        71
+      ],
+      "count": 99992,
+      "search_nodes": 283963,
+      "pair_calls": 283653,
+      "maximum_terminal_denominator": 56602400610
+    },
+    {
+      "branch": "x3_y7_z72",
+      "arguments": [
+        7,
+        3,
+        7,
+        72
+      ],
+      "count": 712860,
+      "search_nodes": 255497,
+      "pair_calls": 255193,
+      "maximum_terminal_denominator": 7773600744
+    },
+    {
+      "branch": "x3_y7_z73",
+      "arguments": [
+        7,
+        3,
+        7,
+        73
+      ],
+      "count": 395285,
+      "search_nodes": 352699,
+      "pair_calls": 352401,
+      "maximum_terminal_denominator": 30710861874
+    },
+    {
+      "branch": "x3_y7_z74",
+      "arguments": [
+        7,
+        3,
+        7,
+        74
+      ],
+      "count": 138751,
+      "search_nodes": 151774,
+      "pair_calls": 151482,
+      "maximum_terminal_denominator": 787334100
+    },
+    {
+      "branch": "x3_y7_z75",
+      "arguments": [
+        7,
+        3,
+        7,
+        75
+      ],
+      "count": 473089,
+      "search_nodes": 163690,
+      "pair_calls": 163403,
+      "maximum_terminal_denominator": 1830346350
+    },
+    {
+      "branch": "x3_y7_z76",
+      "arguments": [
+        7,
+        3,
+        7,
+        76
+      ],
+      "count": 573542,
+      "search_nodes": 284054,
+      "pair_calls": 283771,
+      "maximum_terminal_denominator": 16880325420
+    },
+    {
+      "branch": "x3_y7_z77",
+      "arguments": [
+        7,
+        3,
+        7,
+        77
+      ],
+      "count": 347020,
+      "search_nodes": 149161,
+      "pair_calls": 148883,
+      "maximum_terminal_denominator": 615344730
+    },
+    {
+      "branch": "x3_y7_z78",
+      "arguments": [
+        7,
+        3,
+        7,
+        78
+      ],
+      "count": 235374,
+      "search_nodes": 128400,
+      "pair_calls": 128126,
+      "maximum_terminal_denominator": 210262780
+    },
+    {
+      "branch": "x3_y7_z79",
+      "arguments": [
+        7,
+        3,
+        7,
+        79
+      ],
+      "count": 153366,
+      "search_nodes": 167172,
+      "pair_calls": 166902,
+      "maximum_terminal_denominator": 1857764790
+    },
+    {
+      "branch": "x3_y7_z80",
+      "arguments": [
+        7,
+        3,
+        7,
+        80
+      ],
+      "count": 435886,
+      "search_nodes": 137162,
+      "pair_calls": 136896,
+      "maximum_terminal_denominator": 6096977040
+    },
+    {
+      "branch": "x3_y7_z81",
+      "arguments": [
+        7,
+        3,
+        7,
+        81
+      ],
+      "count": 182000,
+      "search_nodes": 124402,
+      "pair_calls": 124140,
+      "maximum_terminal_denominator": 1493636760
+    },
+    {
+      "branch": "x3_y7_z82",
+      "arguments": [
+        7,
+        3,
+        7,
+        82
+      ],
+      "count": 82602,
+      "search_nodes": 116787,
+      "pair_calls": 116528,
+      "maximum_terminal_denominator": 906109512
+    },
+    {
+      "branch": "x3_y7_z83",
+      "arguments": [
+        7,
+        3,
+        7,
+        83
+      ],
+      "count": 31490,
+      "search_nodes": 111718,
+      "pair_calls": 111462,
+      "maximum_terminal_denominator": 1770619578
+    },
+    {
+      "branch": "x3_y7_z84",
+      "arguments": [
+        7,
+        3,
+        7,
+        84
+      ],
+      "count": 476196,
+      "search_nodes": 108303,
+      "pair_calls": 108050,
+      "maximum_terminal_denominator": 152931660
+    },
+    {
+      "branch": "x3_y7_z85",
+      "arguments": [
+        7,
+        3,
+        7,
+        85
+      ],
+      "count": 156967,
+      "search_nodes": 91882,
+      "pair_calls": 91633,
+      "maximum_terminal_denominator": 1177825110
+    },
+    {
+      "branch": "x3_y7_z86",
+      "arguments": [
+        7,
+        3,
+        7,
+        86
+      ],
+      "count": 45795,
+      "search_nodes": 78282,
+      "pair_calls": 78038,
+      "maximum_terminal_denominator": 291394488
+    },
+    {
+      "branch": "x3_y7_z87",
+      "arguments": [
+        7,
+        3,
+        7,
+        87
+      ],
+      "count": 55823,
+      "search_nodes": 70351,
+      "pair_calls": 70112,
+      "maximum_terminal_denominator": 100344118
+    },
+    {
+      "branch": "x3_y7_z88",
+      "arguments": [
+        7,
+        3,
+        7,
+        88
+      ],
+      "count": 103552,
+      "search_nodes": 64581,
+      "pair_calls": 64346,
+      "maximum_terminal_denominator": 407726088
+    },
+    {
+      "branch": "x3_y7_z89",
+      "arguments": [
+        7,
+        3,
+        7,
+        89
+      ],
+      "count": 11785,
+      "search_nodes": 59983,
+      "pair_calls": 59752,
+      "maximum_terminal_denominator": 518105490
+    },
+    {
+      "branch": "x3_y7_z90",
+      "arguments": [
+        7,
+        3,
+        7,
+        90
+      ],
+      "count": 124985,
+      "search_nodes": 56155,
+      "pair_calls": 55928,
+      "maximum_terminal_denominator": 47498220
+    },
+    {
+      "branch": "x3_y7_z91",
+      "arguments": [
+        7,
+        3,
+        7,
+        91
+      ],
+      "count": 85614,
+      "search_nodes": 52856,
+      "pair_calls": 52633,
+      "maximum_terminal_denominator": 9684870
+    },
+    {
+      "branch": "x3_y7_z92",
+      "arguments": [
+        7,
+        3,
+        7,
+        92
+      ],
+      "count": 32741,
+      "search_nodes": 49941,
+      "pair_calls": 49722,
+      "maximum_terminal_denominator": 227773140
+    },
+    {
+      "branch": "x3_y7_z93",
+      "arguments": [
+        7,
+        3,
+        7,
+        93
+      ],
+      "count": 21096,
+      "search_nodes": 47351,
+      "pair_calls": 47136,
+      "maximum_terminal_denominator": 146077890
+    },
+    {
+      "branch": "x3_y7_z94",
+      "arguments": [
+        7,
+        3,
+        7,
+        94
+      ],
+      "count": 12719,
+      "search_nodes": 45012,
+      "pair_calls": 44801,
+      "maximum_terminal_denominator": 106235745
+    },
+    {
+      "branch": "x3_y7_z95",
+      "arguments": [
+        7,
+        3,
+        7,
+        95
+      ],
+      "count": 30140,
+      "search_nodes": 42878,
+      "pair_calls": 42670,
+      "maximum_terminal_denominator": 388191090
+    },
+    {
+      "branch": "x3_y7_z96",
+      "arguments": [
+        7,
+        3,
+        7,
+        96
+      ],
+      "count": 52376,
+      "search_nodes": 40927,
+      "pair_calls": 40723,
+      "maximum_terminal_denominator": 21097888
+    },
+    {
+      "branch": "x3_y7_z97",
+      "arguments": [
+        7,
+        3,
+        7,
+        97
+      ],
+      "count": 4773,
+      "search_nodes": 39124,
+      "pair_calls": 38923,
+      "maximum_terminal_denominator": 352136190
+    },
+    {
+      "branch": "x3_y7_z98",
+      "arguments": [
+        7,
+        3,
+        7,
+        98
+      ],
+      "count": 30394,
+      "search_nodes": 37447,
+      "pair_calls": 37249,
+      "maximum_terminal_denominator": 12576732
+    },
+    {
+      "branch": "x3_y7_z99",
+      "arguments": [
+        7,
+        3,
+        7,
+        99
+      ],
+      "count": 34452,
+      "search_nodes": 35886,
+      "pair_calls": 35692,
+      "maximum_terminal_denominator": 114925734
+    },
+    {
+      "branch": "x3_y7_z100",
+      "arguments": [
+        7,
+        3,
+        7,
+        100
+      ],
+      "count": 31431,
+      "search_nodes": 34426,
+      "pair_calls": 34235,
+      "maximum_terminal_denominator": 171752700
+    },
+    {
+      "branch": "x3_y7_z101",
+      "arguments": [
+        7,
+        3,
+        7,
+        101
+      ],
+      "count": 3651,
+      "search_nodes": 33049,
+      "pair_calls": 32861,
+      "maximum_terminal_denominator": 346940454
+    },
+    {
+      "branch": "x3_y7_z102",
+      "arguments": [
+        7,
+        3,
+        7,
+        102
+      ],
+      "count": 22201,
+      "search_nodes": 31760,
+      "pair_calls": 31575,
+      "maximum_terminal_denominator": 28894866
+    },
+    {
+      "branch": "x3_y7_z103",
+      "arguments": [
+        7,
+        3,
+        7,
+        103
+      ],
+      "count": 2788,
+      "search_nodes": 30549,
+      "pair_calls": 30367,
+      "maximum_terminal_denominator": 344016498
+    },
+    {
+      "branch": "x3_y7_z104",
+      "arguments": [
+        7,
+        3,
+        7,
+        104
+      ],
+      "count": 26507,
+      "search_nodes": 29393,
+      "pair_calls": 29214,
+      "maximum_terminal_denominator": 171205944
+    },
+    {
+      "branch": "x3_y7_z105",
+      "arguments": [
+        7,
+        3,
+        7,
+        105
+      ],
+      "count": 47454,
+      "search_nodes": 28307,
+      "pair_calls": 28130,
+      "maximum_terminal_denominator": 5448590
+    },
+    {
+      "branch": "x3_y7_z106",
+      "arguments": [
+        7,
+        3,
+        7,
+        106
+      ],
+      "count": 4202,
+      "search_nodes": 27260,
+      "pair_calls": 27086,
+      "maximum_terminal_denominator": 85707678
+    },
+    {
+      "branch": "x3_y7_z107",
+      "arguments": [
+        7,
+        3,
+        7,
+        107
+      ],
+      "count": 1859,
+      "search_nodes": 26272,
+      "pair_calls": 26101,
+      "maximum_terminal_denominator": 342330450
+    },
+    {
+      "branch": "x3_y7_z108",
+      "arguments": [
+        7,
+        3,
+        7,
+        108
+      ],
+      "count": 21028,
+      "search_nodes": 25331,
+      "pair_calls": 25163,
+      "maximum_terminal_denominator": 56340900
+    },
+    {
+      "branch": "x3_y7_z109",
+      "arguments": [
+        7,
+        3,
+        7,
+        109
+      ],
+      "count": 1215,
+      "search_nodes": 24434,
+      "pair_calls": 24268,
+      "maximum_terminal_denominator": 333731622
+    },
+    {
+      "branch": "x3_y7_z110",
+      "arguments": [
+        7,
+        3,
+        7,
+        110
+      ],
+      "count": 18232,
+      "search_nodes": 23568,
+      "pair_calls": 23405,
+      "maximum_terminal_denominator": 85137360
+    },
+    {
+      "branch": "x3_y7_z111",
+      "arguments": [
+        7,
+        3,
+        7,
+        111
+      ],
+      "count": 5171,
+      "search_nodes": 22742,
+      "pair_calls": 22581,
+      "maximum_terminal_denominator": 111600510
+    },
+    {
+      "branch": "x3_y7_z112",
+      "arguments": [
+        7,
+        3,
+        7,
+        112
+      ],
+      "count": 24327,
+      "search_nodes": 21953,
+      "pair_calls": 21795,
+      "maximum_terminal_denominator": 23951760
+    },
+    {
+      "branch": "x3_y7_z113",
+      "arguments": [
+        7,
+        3,
+        7,
+        113
+      ],
+      "count": 1575,
+      "search_nodes": 21188,
+      "pair_calls": 21032,
+      "maximum_terminal_denominator": 330772470
+    },
+    {
+      "branch": "x3_y7_z114",
+      "arguments": [
+        7,
+        3,
+        7,
+        114
+      ],
+      "count": 8344,
+      "search_nodes": 20461,
+      "pair_calls": 20307,
+      "maximum_terminal_denominator": 9339393
+    },
+    {
+      "branch": "x3_y7_z115",
+      "arguments": [
+        7,
+        3,
+        7,
+        115
+      ],
+      "count": 5861,
+      "search_nodes": 19751,
+      "pair_calls": 19600,
+      "maximum_terminal_denominator": 326464530
+    },
+    {
+      "branch": "x3_y7_z116",
+      "arguments": [
+        7,
+        3,
+        7,
+        116
+      ],
+      "count": 4095,
+      "search_nodes": 19076,
+      "pair_calls": 18927,
+      "maximum_terminal_denominator": 165903780
+    },
+    {
+      "branch": "x3_y7_z117",
+      "arguments": [
+        7,
+        3,
+        7,
+        117
+      ],
+      "count": 7433,
+      "search_nodes": 18423,
+      "pair_calls": 18276,
+      "maximum_terminal_denominator": 110714058
+    },
+    {
+      "branch": "x3_y7_z118",
+      "arguments": [
+        7,
+        3,
+        7,
+        118
+      ],
+      "count": 1294,
+      "search_nodes": 17783,
+      "pair_calls": 17639,
+      "maximum_terminal_denominator": 83426826
+    },
+    {
+      "branch": "x3_y7_z119",
+      "arguments": [
+        7,
+        3,
+        7,
+        119
+      ],
+      "count": 7090,
+      "search_nodes": 17177,
+      "pair_calls": 17035,
+      "maximum_terminal_denominator": 46424994
+    },
+    {
+      "branch": "x3_y7_z120",
+      "arguments": [
+        7,
+        3,
+        7,
+        120
+      ],
+      "count": 15132,
+      "search_nodes": 16585,
+      "pair_calls": 16445,
+      "maximum_terminal_denominator": 54617640
+    },
+    {
+      "branch": "x3_y7_z121",
+      "arguments": [
+        7,
+        3,
+        7,
+        121
+      ],
+      "count": 1350,
+      "search_nodes": 16014,
+      "pair_calls": 15876,
+      "maximum_terminal_denominator": 327824574
+    },
+    {
+      "branch": "x3_y7_z122",
+      "arguments": [
+        7,
+        3,
+        7,
+        122
+      ],
+      "count": 1034,
+      "search_nodes": 15465,
+      "pair_calls": 15329,
+      "maximum_terminal_denominator": 83291901
+    },
+    {
+      "branch": "x3_y7_z123",
+      "arguments": [
+        7,
+        3,
+        7,
+        123
+      ],
+      "count": 1338,
+      "search_nodes": 14922,
+      "pair_calls": 14788,
+      "maximum_terminal_denominator": 37031610
+    },
+    {
+      "branch": "x3_y7_z124",
+      "arguments": [
+        7,
+        3,
+        7,
+        124
+      ],
+      "count": 1625,
+      "search_nodes": 14397,
+      "pair_calls": 14265,
+      "maximum_terminal_denominator": 165361812
+    },
+    {
+      "branch": "x3_y7_z125",
+      "arguments": [
+        7,
+        3,
+        7,
+        125
+      ],
+      "count": 1013,
+      "search_nodes": 13896,
+      "pair_calls": 13766,
+      "maximum_terminal_denominator": 333390750
+    },
+    {
+      "branch": "x3_y7_z126",
+      "arguments": [
+        7,
+        3,
+        7,
+        126
+      ],
+      "count": 7875,
+      "search_nodes": 13403,
+      "pair_calls": 13275,
+      "maximum_terminal_denominator": 3953250
+    },
+    {
+      "branch": "x3_y7_z127",
+      "arguments": [
+        7,
+        3,
+        7,
+        127
+      ],
+      "count": 251,
+      "search_nodes": 12920,
+      "pair_calls": 12794,
+      "maximum_terminal_denominator": 330691998
+    },
+    {
+      "branch": "x3_y7_z128",
+      "arguments": [
+        7,
+        3,
+        7,
+        128
+      ],
+      "count": 1192,
+      "search_nodes": 12456,
+      "pair_calls": 12332,
+      "maximum_terminal_denominator": 166647936
+    },
+    {
+      "branch": "x3_y7_z129",
+      "arguments": [
+        7,
+        3,
+        7,
+        129
+      ],
+      "count": 631,
+      "search_nodes": 12011,
+      "pair_calls": 11889,
+      "maximum_terminal_denominator": 109246746
+    },
+    {
+      "branch": "x3_y7_z130",
+      "arguments": [
+        7,
+        3,
+        7,
+        130
+      ],
+      "count": 2168,
+      "search_nodes": 11588,
+      "pair_calls": 11468,
+      "maximum_terminal_denominator": 81884985
+    },
+    {
+      "branch": "x3_y7_z131",
+      "arguments": [
+        7,
+        3,
+        7,
+        131
+      ],
+      "count": 89,
+      "search_nodes": 11166,
+      "pair_calls": 11048,
+      "maximum_terminal_denominator": 327517554
+    },
+    {
+      "branch": "x3_y7_z132",
+      "arguments": [
+        7,
+        3,
+        7,
+        132
+      ],
+      "count": 2845,
+      "search_nodes": 10764,
+      "pair_calls": 10648,
+      "maximum_terminal_denominator": 18486468
+    },
+    {
+      "branch": "x3_y7_z133",
+      "arguments": [
+        7,
+        3,
+        7,
+        133
+      ],
+      "count": 1516,
+      "search_nodes": 10377,
+      "pair_calls": 10263,
+      "maximum_terminal_denominator": 45964002
+    },
+    {
+      "branch": "x3_y7_z134",
+      "arguments": [
+        7,
+        3,
+        7,
+        134
+      ],
+      "count": 173,
+      "search_nodes": 9998,
+      "pair_calls": 9886,
+      "maximum_terminal_denominator": 82737228
+    },
+    {
+      "branch": "x3_y7_z135",
+      "arguments": [
+        7,
+        3,
+        7,
+        135
+      ],
+      "count": 1853,
+      "search_nodes": 9645,
+      "pair_calls": 9535,
+      "maximum_terminal_denominator": 108862110
+    },
+    {
+      "branch": "x3_y7_z136",
+      "arguments": [
+        7,
+        3,
+        7,
+        136
+      ],
+      "count": 1163,
+      "search_nodes": 9291,
+      "pair_calls": 9182,
+      "maximum_terminal_denominator": 164502744
+    },
+    {
+      "branch": "x3_y7_z137",
+      "arguments": [
+        7,
+        3,
+        7,
+        137
+      ],
+      "count": 48,
+      "search_nodes": 8955,
+      "pair_calls": 8848,
+      "maximum_terminal_denominator": 331424646
+    },
+    {
+      "branch": "x3_y7_z138",
+      "arguments": [
+        7,
+        3,
+        7,
+        138
+      ],
+      "count": 687,
+      "search_nodes": 8621,
+      "pair_calls": 8516,
+      "maximum_terminal_denominator": 27935754
+    },
+    {
+      "branch": "x3_y7_z139",
+      "arguments": [
+        7,
+        3,
+        7,
+        139
+      ],
+      "count": 32,
+      "search_nodes": 8306,
+      "pair_calls": 8203,
+      "maximum_terminal_denominator": 336262962
+    },
+    {
+      "branch": "x3_y7_z140",
+      "arguments": [
+        7,
+        3,
+        7,
+        140
+      ],
+      "count": 3688,
+      "search_nodes": 8004,
+      "pair_calls": 7902,
+      "maximum_terminal_denominator": 3369180
+    },
+    {
+      "branch": "x3_y7_z141",
+      "arguments": [
+        7,
+        3,
+        7,
+        141
+      ],
+      "count": 145,
+      "search_nodes": 7700,
+      "pair_calls": 7600,
+      "maximum_terminal_denominator": 37271094
+    },
+    {
+      "branch": "x3_y7_z142",
+      "arguments": [
+        7,
+        3,
+        7,
+        142
+      ],
+      "count": 68,
+      "search_nodes": 7415,
+      "pair_calls": 7317,
+      "maximum_terminal_denominator": 84098364
+    },
+    {
+      "branch": "x3_y7_z143",
+      "arguments": [
+        7,
+        3,
+        7,
+        143
+      ],
+      "count": 306,
+      "search_nodes": 7129,
+      "pair_calls": 7033,
+      "maximum_terminal_denominator": 334456122
+    },
+    {
+      "branch": "x3_y7_z144",
+      "arguments": [
+        7,
+        3,
+        7,
+        144
+      ],
+      "count": 954,
+      "search_nodes": 6860,
+      "pair_calls": 6765,
+      "maximum_terminal_denominator": 55193040
+    },
+    {
+      "branch": "x3_y7_z145",
+      "arguments": [
+        7,
+        3,
+        7,
+        145
+      ],
+      "count": 148,
+      "search_nodes": 6601,
+      "pair_calls": 6508,
+      "maximum_terminal_denominator": 333311790
+    },
+    {
+      "branch": "x3_y7_z146",
+      "arguments": [
+        7,
+        3,
+        7,
+        146
+      ],
+      "count": 37,
+      "search_nodes": 6347,
+      "pair_calls": 6256,
+      "maximum_terminal_denominator": 85020180
+    },
+    {
+      "branch": "x3_y7_z147",
+      "arguments": [
+        7,
+        3,
+        7,
+        147
+      ],
+      "count": 537,
+      "search_nodes": 6099,
+      "pair_calls": 6009,
+      "maximum_terminal_denominator": 16097970
+    },
+    {
+      "branch": "x3_y7_z148",
+      "arguments": [
+        7,
+        3,
+        7,
+        148
+      ],
+      "count": 106,
+      "search_nodes": 5859,
+      "pair_calls": 5771,
+      "maximum_terminal_denominator": 170178540
+    },
+    {
+      "branch": "x3_y7_z149",
+      "arguments": [
+        7,
+        3,
+        7,
+        149
+      ],
+      "count": 10,
+      "search_nodes": 5629,
+      "pair_calls": 5543,
+      "maximum_terminal_denominator": 336774270
+    },
+    {
+      "branch": "x3_y7_z150",
+      "arguments": [
+        7,
+        3,
+        7,
+        150
+      ],
+      "count": 428,
+      "search_nodes": 5408,
+      "pair_calls": 5323,
+      "maximum_terminal_denominator": 9459800
+    },
+    {
+      "branch": "x3_y7_z151",
+      "arguments": [
+        7,
+        3,
+        7,
+        151
+      ],
+      "count": 6,
+      "search_nodes": 5192,
+      "pair_calls": 5109,
+      "maximum_terminal_denominator": 338390094
+    },
+    {
+      "branch": "x3_y7_z152",
+      "arguments": [
+        7,
+        3,
+        7,
+        152
+      ],
+      "count": 193,
+      "search_nodes": 4981,
+      "pair_calls": 4899,
+      "maximum_terminal_denominator": 170315544
+    },
+    {
+      "branch": "x3_y7_z153",
+      "arguments": [
+        7,
+        3,
+        7,
+        153
+      ],
+      "count": 151,
+      "search_nodes": 4779,
+      "pair_calls": 4699,
+      "maximum_terminal_denominator": 113292522
+    },
+    {
+      "branch": "x3_y7_z154",
+      "arguments": [
+        7,
+        3,
+        7,
+        154
+      ],
+      "count": 466,
+      "search_nodes": 4585,
+      "pair_calls": 4506,
+      "maximum_terminal_denominator": 12166770
+    },
+    {
+      "branch": "x3_y7_z155",
+      "arguments": [
+        7,
+        3,
+        7,
+        155
+      ],
+      "count": 44,
+      "search_nodes": 4388,
+      "pair_calls": 4311,
+      "maximum_terminal_denominator": 338409330
+    },
+    {
+      "branch": "x3_y7_z156",
+      "arguments": [
+        7,
+        3,
+        7,
+        156
+      ],
+      "count": 347,
+      "search_nodes": 4200,
+      "pair_calls": 4125,
+      "maximum_terminal_denominator": 56765436
+    },
+    {
+      "branch": "x3_y7_z157",
+      "arguments": [
+        7,
+        3,
+        7,
+        157
+      ],
+      "count": 4,
+      "search_nodes": 4022,
+      "pair_calls": 3948,
+      "maximum_terminal_denominator": 342775902
+    },
+    {
+      "branch": "x3_y7_z158",
+      "arguments": [
+        7,
+        3,
+        7,
+        158
+      ],
+      "count": 11,
+      "search_nodes": 3846,
+      "pair_calls": 3774,
+      "maximum_terminal_denominator": 86239797
+    },
+    {
+      "branch": "x3_y7_z159",
+      "arguments": [
+        7,
+        3,
+        7,
+        159
+      ],
+      "count": 14,
+      "search_nodes": 3679,
+      "pair_calls": 3608,
+      "maximum_terminal_denominator": 38231550
+    },
+    {
+      "branch": "x3_y7_z160",
+      "arguments": [
+        7,
+        3,
+        7,
+        160
+      ],
+      "count": 183,
+      "search_nodes": 3512,
+      "pair_calls": 3443,
+      "maximum_terminal_denominator": 171585120
+    },
+    {
+      "branch": "x3_y7_z161",
+      "arguments": [
+        7,
+        3,
+        7,
+        161
+      ],
+      "count": 91,
+      "search_nodes": 3356,
+      "pair_calls": 3288,
+      "maximum_terminal_denominator": 48899886
+    },
+    {
+      "branch": "x3_y7_z162",
+      "arguments": [
+        7,
+        3,
+        7,
+        162
+      ],
+      "count": 63,
+      "search_nodes": 3199,
+      "pair_calls": 3133,
+      "maximum_terminal_denominator": 29088234
+    },
+    {
+      "branch": "x3_y7_z163",
+      "arguments": [
+        7,
+        3,
+        7,
+        163
+      ],
+      "count": 3,
+      "search_nodes": 3051,
+      "pair_calls": 2986,
+      "maximum_terminal_denominator": 346551366
+    },
+    {
+      "branch": "x3_y7_z164",
+      "arguments": [
+        7,
+        3,
+        7,
+        164
+      ],
+      "count": 10,
+      "search_nodes": 2905,
+      "pair_calls": 2842,
+      "maximum_terminal_denominator": 172775148
+    },
+    {
+      "branch": "x3_y7_z165",
+      "arguments": [
+        7,
+        3,
+        7,
+        165
+      ],
+      "count": 110,
+      "search_nodes": 2767,
+      "pair_calls": 2705,
+      "maximum_terminal_denominator": 113843730
+    },
+    {
+      "branch": "x3_y7_z166",
+      "arguments": [
+        7,
+        3,
+        7,
+        166
+      ],
+      "count": 3,
+      "search_nodes": 2633,
+      "pair_calls": 2573,
+      "maximum_terminal_denominator": 87055878
+    },
+    {
+      "branch": "x3_y7_z167",
+      "arguments": [
+        7,
+        3,
+        7,
+        167
+      ],
+      "count": 0,
+      "search_nodes": 2499,
+      "pair_calls": 2440,
+      "maximum_terminal_denominator": 345670962
+    },
+    {
+      "branch": "x3_y7_z168",
+      "arguments": [
+        7,
+        3,
+        7,
+        168
+      ],
+      "count": 223,
+      "search_nodes": 2378,
+      "pair_calls": 2320,
+      "maximum_terminal_denominator": 2784600
+    },
+    {
+      "branch": "x3_y7_z169",
+      "arguments": [
+        7,
+        3,
+        7,
+        169
+      ],
+      "count": 2,
+      "search_nodes": 2255,
+      "pair_calls": 2199,
+      "maximum_terminal_denominator": 340313610
+    },
+    {
+      "branch": "x3_y7_z170",
+      "arguments": [
+        7,
+        3,
+        7,
+        170
+      ],
+      "count": 30,
+      "search_nodes": 2133,
+      "pair_calls": 2078,
+      "maximum_terminal_denominator": 86775990
+    },
+    {
+      "branch": "x3_y7_z171",
+      "arguments": [
+        7,
+        3,
+        7,
+        171
+      ],
+      "count": 33,
+      "search_nodes": 2019,
+      "pair_calls": 1966,
+      "maximum_terminal_denominator": 117983502
+    },
+    {
+      "branch": "x3_y7_z172",
+      "arguments": [
+        7,
+        3,
+        7,
+        172
+      ],
+      "count": 1,
+      "search_nodes": 1910,
+      "pair_calls": 1858,
+      "maximum_terminal_denominator": 171364116
+    },
+    {
+      "branch": "x3_y7_z173",
+      "arguments": [
+        7,
+        3,
+        7,
+        173
+      ],
+      "count": 0,
+      "search_nodes": 1802,
+      "pair_calls": 1752,
+      "maximum_terminal_denominator": 348368370
+    },
+    {
+      "branch": "x3_y7_z174",
+      "arguments": [
+        7,
+        3,
+        7,
+        174
+      ],
+      "count": 7,
+      "search_nodes": 1699,
+      "pair_calls": 1650,
+      "maximum_terminal_denominator": 29609580
+    },
+    {
+      "branch": "x3_y7_z175",
+      "arguments": [
+        7,
+        3,
+        7,
+        175
+      ],
+      "count": 43,
+      "search_nodes": 1602,
+      "pair_calls": 1554,
+      "maximum_terminal_denominator": 49405650
+    },
+    {
+      "branch": "x3_y7_z176",
+      "arguments": [
+        7,
+        3,
+        7,
+        176
+      ],
+      "count": 14,
+      "search_nodes": 1506,
+      "pair_calls": 1460,
+      "maximum_terminal_denominator": 175615440
+    },
+    {
+      "branch": "x3_y7_z177",
+      "arguments": [
+        7,
+        3,
+        7,
+        177
+      ],
+      "count": 1,
+      "search_nodes": 1416,
+      "pair_calls": 1371,
+      "maximum_terminal_denominator": 39247390
+    },
+    {
+      "branch": "x3_y7_z178",
+      "arguments": [
+        7,
+        3,
+        7,
+        178
+      ],
+      "count": 0,
+      "search_nodes": 1327,
+      "pair_calls": 1284,
+      "maximum_terminal_denominator": 88805535
+    },
+    {
+      "branch": "x3_y7_z179",
+      "arguments": [
+        7,
+        3,
+        7,
+        179
+      ],
+      "count": 0,
+      "search_nodes": 1243,
+      "pair_calls": 1201,
+      "maximum_terminal_denominator": 357217770
+    },
+    {
+      "branch": "x3_y7_z180",
+      "arguments": [
+        7,
+        3,
+        7,
+        180
+      ],
+      "count": 37,
+      "search_nodes": 1159,
+      "pair_calls": 1118,
+      "maximum_terminal_denominator": 58755060
+    },
+    {
+      "branch": "x3_y7_z181",
+      "arguments": [
+        7,
+        3,
+        7,
+        181
+      ],
+      "count": 0,
+      "search_nodes": 1080,
+      "pair_calls": 1041,
+      "maximum_terminal_denominator": 354488862
+    },
+    {
+      "branch": "x3_y7_z182",
+      "arguments": [
+        7,
+        3,
+        7,
+        182
+      ],
+      "count": 17,
+      "search_nodes": 1004,
+      "pair_calls": 966,
+      "maximum_terminal_denominator": 12795510
+    },
+    {
+      "branch": "x3_y7_z183",
+      "arguments": [
+        7,
+        3,
+        7,
+        183
+      ],
+      "count": 0,
+      "search_nodes": 932,
+      "pair_calls": 895,
+      "maximum_terminal_denominator": 118336218
+    },
+    {
+      "branch": "x3_y7_z184",
+      "arguments": [
+        7,
+        3,
+        7,
+        184
+      ],
+      "count": 2,
+      "search_nodes": 863,
+      "pair_calls": 828,
+      "maximum_terminal_denominator": 175290360
+    },
+    {
+      "branch": "x3_y7_z185",
+      "arguments": [
+        7,
+        3,
+        7,
+        185
+      ],
+      "count": 0,
+      "search_nodes": 797,
+      "pair_calls": 763,
+      "maximum_terminal_denominator": 344809290
+    },
+    {
+      "branch": "x3_y7_z186",
+      "arguments": [
+        7,
+        3,
+        7,
+        186
+      ],
+      "count": 2,
+      "search_nodes": 736,
+      "pair_calls": 703,
+      "maximum_terminal_denominator": 10077480
+    },
+    {
+      "branch": "x3_y7_z187",
+      "arguments": [
+        7,
+        3,
+        7,
+        187
+      ],
+      "count": 2,
+      "search_nodes": 673,
+      "pair_calls": 642,
+      "maximum_terminal_denominator": 356296710
+    },
+    {
+      "branch": "x3_y7_z188",
+      "arguments": [
+        7,
+        3,
+        7,
+        188
+      ],
+      "count": 0,
+      "search_nodes": 617,
+      "pair_calls": 587,
+      "maximum_terminal_denominator": 179101020
+    },
+    {
+      "branch": "x3_y7_z189",
+      "arguments": [
+        7,
+        3,
+        7,
+        189
+      ],
+      "count": 14,
+      "search_nodes": 564,
+      "pair_calls": 535,
+      "maximum_terminal_denominator": 2472498
+    },
+    {
+      "branch": "x3_y7_z190",
+      "arguments": [
+        7,
+        3,
+        7,
+        190
+      ],
+      "count": 1,
+      "search_nodes": 510,
+      "pair_calls": 483,
+      "maximum_terminal_denominator": 90082230
+    },
+    {
+      "branch": "x3_y7_z191",
+      "arguments": [
+        7,
+        3,
+        7,
+        191
+      ],
+      "count": 0,
+      "search_nodes": 463,
+      "pair_calls": 437,
+      "maximum_terminal_denominator": 363918030
+    },
+    {
+      "branch": "x3_y7_z192",
+      "arguments": [
+        7,
+        3,
+        7,
+        192
+      ],
+      "count": 3,
+      "search_nodes": 417,
+      "pair_calls": 392,
+      "maximum_terminal_denominator": 60970560
+    },
+    {
+      "branch": "x3_y7_z193",
+      "arguments": [
+        7,
+        3,
+        7,
+        193
+      ],
+      "count": 0,
+      "search_nodes": 372,
+      "pair_calls": 349,
+      "maximum_terminal_denominator": 367728690
+    },
+    {
+      "branch": "x3_y7_z194",
+      "arguments": [
+        7,
+        3,
+        7,
+        194
+      ],
+      "count": 0,
+      "search_nodes": 331,
+      "pair_calls": 309,
+      "maximum_terminal_denominator": 92846460
+    },
+    {
+      "branch": "x3_y7_z195",
+      "arguments": [
+        7,
+        3,
+        7,
+        195
+      ],
+      "count": 1,
+      "search_nodes": 293,
+      "pair_calls": 272,
+      "maximum_terminal_denominator": 40898130
+    },
+    {
+      "branch": "x3_y7_z196",
+      "arguments": [
+        7,
+        3,
+        7,
+        196
+      ],
+      "count": 2,
+      "search_nodes": 257,
+      "pair_calls": 238,
+      "maximum_terminal_denominator": 26421780
+    },
+    {
+      "branch": "x3_y7_z197",
+      "arguments": [
+        7,
+        3,
+        7,
+        197
+      ],
+      "count": 0,
+      "search_nodes": 224,
+      "pair_calls": 206,
+      "maximum_terminal_denominator": 371792190
+    },
+    {
+      "branch": "x3_y7_z198",
+      "arguments": [
+        7,
+        3,
+        7,
+        198
+      ],
+      "count": 1,
+      "search_nodes": 193,
+      "pair_calls": 176,
+      "maximum_terminal_denominator": 30999276
+    },
+    {
+      "branch": "x3_y7_z199",
+      "arguments": [
+        7,
+        3,
+        7,
+        199
+      ],
+      "count": 0,
+      "search_nodes": 164,
+      "pair_calls": 149,
+      "maximum_terminal_denominator": 368579442
+    },
+    {
+      "branch": "x3_y7_z200",
+      "arguments": [
+        7,
+        3,
+        7,
+        200
+      ],
+      "count": 0,
+      "search_nodes": 137,
+      "pair_calls": 123,
+      "maximum_terminal_denominator": 185215800
+    },
+    {
+      "branch": "x3_y7_z201",
+      "arguments": [
+        7,
+        3,
+        7,
+        201
+      ],
+      "count": 0,
+      "search_nodes": 114,
+      "pair_calls": 101,
+      "maximum_terminal_denominator": 124094586
+    },
+    {
+      "branch": "x3_y7_z202",
+      "arguments": [
+        7,
+        3,
+        7,
+        202
+      ],
+      "count": 0,
+      "search_nodes": 93,
+      "pair_calls": 81,
+      "maximum_terminal_denominator": 94876572
+    },
+    {
+      "branch": "x3_y7_z203",
+      "arguments": [
+        7,
+        3,
+        7,
+        203
+      ],
+      "count": 0,
+      "search_nodes": 73,
+      "pair_calls": 63,
+      "maximum_terminal_denominator": 53712582
+    },
+    {
+      "branch": "x3_y7_z204",
+      "arguments": [
+        7,
+        3,
+        7,
+        204
+      ],
+      "count": 1,
+      "search_nodes": 57,
+      "pair_calls": 48,
+      "maximum_terminal_denominator": 20991124
+    },
+    {
+      "branch": "x3_y7_z205",
+      "arguments": [
+        7,
+        3,
+        7,
+        205
+      ],
+      "count": 0,
+      "search_nodes": 43,
+      "pair_calls": 35,
+      "maximum_terminal_denominator": 379692390
+    },
+    {
+      "branch": "x3_y7_z206",
+      "arguments": [
+        7,
+        3,
+        7,
+        206
+      ],
+      "count": 0,
+      "search_nodes": 31,
+      "pair_calls": 24,
+      "maximum_terminal_denominator": 95386137
+    },
+    {
+      "branch": "x3_y7_z207",
+      "arguments": [
+        7,
+        3,
+        7,
+        207
+      ],
+      "count": 0,
+      "search_nodes": 20,
+      "pair_calls": 15,
+      "maximum_terminal_denominator": 127798902
+    },
+    {
+      "branch": "x3_y7_z208",
+      "arguments": [
+        7,
+        3,
+        7,
+        208
+      ],
+      "count": 0,
+      "search_nodes": 12,
+      "pair_calls": 8,
+      "maximum_terminal_denominator": 192624432
+    },
+    {
+      "branch": "x3_y7_z209",
+      "arguments": [
+        7,
+        3,
+        7,
+        209
+      ],
+      "count": 0,
+      "search_nodes": 6,
+      "pair_calls": 3,
+      "maximum_terminal_denominator": 21945
+    },
+    {
+      "branch": "x3_y7_z210",
+      "arguments": [
+        7,
+        3,
+        7,
+        210
+      ],
+      "count": 1,
+      "search_nodes": 3,
+      "pair_calls": 1,
+      "maximum_terminal_denominator": 105
+    },
+    {
+      "branch": "x3_y7_z43_w1807_1808",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1807,
+        1808
+      ],
+      "count": 2933669,
+      "search_nodes": 9792134,
+      "pair_calls": 9792132,
+      "maximum_terminal_denominator": 31950157798650
+    },
+    {
+      "branch": "x3_y7_z43_w1809_1810",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1809,
+        1810
+      ],
+      "count": 1508949,
+      "search_nodes": 3812468,
+      "pair_calls": 3812466,
+      "maximum_terminal_denominator": 3557879523954
+    },
+    {
+      "branch": "x3_y7_z43_w1811_1812",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1811,
+        1812
+      ],
+      "count": 476552,
+      "search_nodes": 2399092,
+      "pair_calls": 2399090,
+      "maximum_terminal_denominator": 6418345146402
+    },
+    {
+      "branch": "x3_y7_z43_w1813_1814",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1813,
+        1814
+      ],
+      "count": 543710,
+      "search_nodes": 1754531,
+      "pair_calls": 1754529,
+      "maximum_terminal_denominator": 1006192688151
+    },
+    {
+      "branch": "x3_y7_z43_w1815_1816",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1815,
+        1816
+      ],
+      "count": 758713,
+      "search_nodes": 1384361,
+      "pair_calls": 1384359,
+      "maximum_terminal_denominator": 1613454646440
+    },
+    {
+      "branch": "x3_y7_z43_w1817_1818",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1817,
+        1818
+      ],
+      "count": 332849,
+      "search_nodes": 1143857,
+      "pair_calls": 1143855,
+      "maximum_terminal_denominator": 2936796622410
+    },
+    {
+      "branch": "x3_y7_z43_w1819_1820",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1819,
+        1820
+      ],
+      "count": 1534960,
+      "search_nodes": 974964,
+      "pair_calls": 974962,
+      "maximum_terminal_denominator": 2490448208514
+    },
+    {
+      "branch": "x3_y7_z43_w1821_1822",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1821,
+        1822
+      ],
+      "count": 63090,
+      "search_nodes": 849815,
+      "pair_calls": 849813,
+      "maximum_terminal_denominator": 721047694290
+    },
+    {
+      "branch": "x3_y7_z43_w1823_1824",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1823,
+        1824
+      ],
+      "count": 438532,
+      "search_nodes": 753352,
+      "pair_calls": 753350,
+      "maximum_terminal_denominator": 1912845085662
+    },
+    {
+      "branch": "x3_y7_z43_w1825_1826",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1825,
+        1826
+      ],
+      "count": 200742,
+      "search_nodes": 676720,
+      "pair_calls": 676718,
+      "maximum_terminal_denominator": 1715248635450
+    },
+    {
+      "branch": "x3_y7_z43_w1827_1836",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1827,
+        1836
+      ],
+      "count": 1160974,
+      "search_nodes": 2627482,
+      "pair_calls": 2627472,
+      "maximum_terminal_denominator": 1423162608378
+    },
+    {
+      "branch": "x3_y7_z43_w1837_1846",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1837,
+        1846
+      ],
+      "count": 515245,
+      "search_nodes": 1885842,
+      "pair_calls": 1885832,
+      "maximum_terminal_denominator": 1065152401698
+    },
+    {
+      "branch": "x3_y7_z43_w1847_1856",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1847,
+        1856
+      ],
+      "count": 875934,
+      "search_nodes": 1475571,
+      "pair_calls": 1475561,
+      "maximum_terminal_denominator": 814149912786
+    },
+    {
+      "branch": "x3_y7_z43_w1857_1866",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1857,
+        1866
+      ],
+      "count": 364896,
+      "search_nodes": 1214658,
+      "pair_calls": 1214648,
+      "maximum_terminal_denominator": 638021482098
+    },
+    {
+      "branch": "x3_y7_z43_w1867_1876",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1867,
+        1876
+      ],
+      "count": 379982,
+      "search_nodes": 1033971,
+      "pair_calls": 1033961,
+      "maximum_terminal_denominator": 559115579442
+    },
+    {
+      "branch": "x3_y7_z43_w1877_1886",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1877,
+        1886
+      ],
+      "count": 221720,
+      "search_nodes": 901393,
+      "pair_calls": 901383,
+      "maximum_terminal_denominator": 485533324122
+    },
+    {
+      "branch": "x3_y7_z43_w1887_1896",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1887,
+        1896
+      ],
+      "count": 544212,
+      "search_nodes": 799948,
+      "pair_calls": 799938,
+      "maximum_terminal_denominator": 420666022938
+    },
+    {
+      "branch": "x3_y7_z43_w1897_1906",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1897,
+        1906
+      ],
+      "count": 269271,
+      "search_nodes": 719814,
+      "pair_calls": 719804,
+      "maximum_terminal_denominator": 372211028490
+    },
+    {
+      "branch": "x3_y7_z43_w1907_1916",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1907,
+        1916
+      ],
+      "count": 168857,
+      "search_nodes": 654908,
+      "pair_calls": 654898,
+      "maximum_terminal_denominator": 352308276390
+    },
+    {
+      "branch": "x3_y7_z43_w1917_1926",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1917,
+        1926
+      ],
+      "count": 222268,
+      "search_nodes": 601265,
+      "pair_calls": 601255,
+      "maximum_terminal_denominator": 318876879426
+    },
+    {
+      "branch": "x3_y7_z43_w1927_1936",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1927,
+        1936
+      ],
+      "count": 330103,
+      "search_nodes": 556186,
+      "pair_calls": 556176,
+      "maximum_terminal_denominator": 300285778170
+    },
+    {
+      "branch": "x3_y7_z43_w1937_1946",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1937,
+        1946
+      ],
+      "count": 115186,
+      "search_nodes": 517768,
+      "pair_calls": 517758,
+      "maximum_terminal_denominator": 280246062642
+    },
+    {
+      "branch": "x3_y7_z43_w1947_1956",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1947,
+        1956
+      ],
+      "count": 159744,
+      "search_nodes": 484637,
+      "pair_calls": 484627,
+      "maximum_terminal_denominator": 259912492854
+    },
+    {
+      "branch": "x3_y7_z43_w1957_1966",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1957,
+        1966
+      ],
+      "count": 120995,
+      "search_nodes": 455776,
+      "pair_calls": 455766,
+      "maximum_terminal_denominator": 248156754846
+    },
+    {
+      "branch": "x3_y7_z43_w1967_1976",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1967,
+        1976
+      ],
+      "count": 120882,
+      "search_nodes": 430404,
+      "pair_calls": 430394,
+      "maximum_terminal_denominator": 232730448258
+    },
+    {
+      "branch": "x3_y7_z43_w1977_1986",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1977,
+        1986
+      ],
+      "count": 169608,
+      "search_nodes": 407926,
+      "pair_calls": 407916,
+      "maximum_terminal_denominator": 221503236150
+    },
+    {
+      "branch": "x3_y7_z43_w1987_1996",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1987,
+        1996
+      ],
+      "count": 121347,
+      "search_nodes": 387873,
+      "pair_calls": 387863,
+      "maximum_terminal_denominator": 213434522994
+    },
+    {
+      "branch": "x3_y7_z43_w1997_2006",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        1997,
+        2006
+      ],
+      "count": 121272,
+      "search_nodes": 369874,
+      "pair_calls": 369864,
+      "maximum_terminal_denominator": 204302050554
+    },
+    {
+      "branch": "x3_y7_z43_w2007_2206",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        2007,
+        2206
+      ],
+      "count": 1516319,
+      "search_nodes": 5236047,
+      "pair_calls": 5235847,
+      "maximum_terminal_denominator": 193030046034
+    },
+    {
+      "branch": "x3_y7_z43_w2207_2406",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        2207,
+        2406
+      ],
+      "count": 779951,
+      "search_nodes": 3364843,
+      "pair_calls": 3364643,
+      "maximum_terminal_denominator": 118853822598
+    },
+    {
+      "branch": "x3_y7_z43_w2407_2606",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        2407,
+        2606
+      ],
+      "count": 573575,
+      "search_nodes": 2597873,
+      "pair_calls": 2597673,
+      "maximum_terminal_denominator": 94317770274
+    },
+    {
+      "branch": "x3_y7_z43_w2607_2806",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        2607,
+        2806
+      ],
+      "count": 453446,
+      "search_nodes": 2177411,
+      "pair_calls": 2177211,
+      "maximum_terminal_denominator": 82942765962
+    },
+    {
+      "branch": "x3_y7_z43_w2807_3006",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        2807,
+        3006
+      ],
+      "count": 312231,
+      "search_nodes": 1911387,
+      "pair_calls": 1911187,
+      "maximum_terminal_denominator": 76973448342
+    },
+    {
+      "branch": "x3_y7_z43_w3007_3206",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        3007,
+        3206
+      ],
+      "count": 307131,
+      "search_nodes": 1727776,
+      "pair_calls": 1727576,
+      "maximum_terminal_denominator": 73666658730
+    },
+    {
+      "branch": "x3_y7_z43_w3207_3406",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        3207,
+        3406
+      ],
+      "count": 269853,
+      "search_nodes": 1593370,
+      "pair_calls": 1593170,
+      "maximum_terminal_denominator": 71811470514
+    },
+    {
+      "branch": "x3_y7_z43_w3407_3606",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        3407,
+        3606
+      ],
+      "count": 207393,
+      "search_nodes": 1490701,
+      "pair_calls": 1490501,
+      "maximum_terminal_denominator": 70926115134
+    },
+    {
+      "branch": "x3_y7_z43_w3607_3806",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        3607,
+        3806
+      ],
+      "count": 124959,
+      "search_nodes": 1373239,
+      "pair_calls": 1373039,
+      "maximum_terminal_denominator": 70853485038
+    },
+    {
+      "branch": "x3_y7_z43_w3807_4006",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        3807,
+        4006
+      ],
+      "count": 39297,
+      "search_nodes": 1234983,
+      "pair_calls": 1234783,
+      "maximum_terminal_denominator": 71361585078
+    },
+    {
+      "branch": "x3_y7_z43_w4007_4206",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        4007,
+        4206
+      ],
+      "count": 21486,
+      "search_nodes": 1113809,
+      "pair_calls": 1113609,
+      "maximum_terminal_denominator": 72092025390
+    },
+    {
+      "branch": "x3_y7_z43_w4207_4406",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        4207,
+        4406
+      ],
+      "count": 16216,
+      "search_nodes": 1005655,
+      "pair_calls": 1005455,
+      "maximum_terminal_denominator": 73038802830
+    },
+    {
+      "branch": "x3_y7_z43_w4407_4606",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        4407,
+        4606
+      ],
+      "count": 12099,
+      "search_nodes": 907612,
+      "pair_calls": 907412,
+      "maximum_terminal_denominator": 74110555470
+    },
+    {
+      "branch": "x3_y7_z43_w4607_4806",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        4607,
+        4806
+      ],
+      "count": 7793,
+      "search_nodes": 817572,
+      "pair_calls": 817372,
+      "maximum_terminal_denominator": 75297530910
+    },
+    {
+      "branch": "x3_y7_z43_w4807_5006",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        4807,
+        5006
+      ],
+      "count": 5409,
+      "search_nodes": 734013,
+      "pair_calls": 733813,
+      "maximum_terminal_denominator": 76557096714
+    },
+    {
+      "branch": "x3_y7_z43_w5007_5206",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        5007,
+        5206
+      ],
+      "count": 3928,
+      "search_nodes": 655716,
+      "pair_calls": 655516,
+      "maximum_terminal_denominator": 77930147946
+    },
+    {
+      "branch": "x3_y7_z43_w5207_5406",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        5207,
+        5406
+      ],
+      "count": 1610,
+      "search_nodes": 581811,
+      "pair_calls": 581611,
+      "maximum_terminal_denominator": 79369974222
+    },
+    {
+      "branch": "x3_y7_z43_w5407_5606",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        5407,
+        5606
+      ],
+      "count": 1277,
+      "search_nodes": 511578,
+      "pair_calls": 511378,
+      "maximum_terminal_denominator": 80910181590
+    },
+    {
+      "branch": "x3_y7_z43_w5607_5806",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        5607,
+        5806
+      ],
+      "count": 433,
+      "search_nodes": 444434,
+      "pair_calls": 444234,
+      "maximum_terminal_denominator": 82419459402
+    },
+    {
+      "branch": "x3_y7_z43_w5807_6006",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        5807,
+        6006
+      ],
+      "count": 204,
+      "search_nodes": 379951,
+      "pair_calls": 379751,
+      "maximum_terminal_denominator": 84016447410
+    },
+    {
+      "branch": "x3_y7_z43_w6007_6206",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        6007,
+        6206
+      ],
+      "count": 199,
+      "search_nodes": 317740,
+      "pair_calls": 317540,
+      "maximum_terminal_denominator": 85621609374
+    },
+    {
+      "branch": "x3_y7_z43_w6207_6406",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        6207,
+        6406
+      ],
+      "count": 77,
+      "search_nodes": 257505,
+      "pair_calls": 257305,
+      "maximum_terminal_denominator": 87244874682
+    },
+    {
+      "branch": "x3_y7_z43_w6407_6606",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        6407,
+        6606
+      ],
+      "count": 46,
+      "search_nodes": 199001,
+      "pair_calls": 198801,
+      "maximum_terminal_denominator": 88904079390
+    },
+    {
+      "branch": "x3_y7_z43_w6607_6806",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        6607,
+        6806
+      ],
+      "count": 37,
+      "search_nodes": 141998,
+      "pair_calls": 141798,
+      "maximum_terminal_denominator": 90612916590
+    },
+    {
+      "branch": "x3_y7_z43_w6807_7006",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        6807,
+        7006
+      ],
+      "count": 10,
+      "search_nodes": 86332,
+      "pair_calls": 86132,
+      "maximum_terminal_denominator": 92288209146
+    },
+    {
+      "branch": "x3_y7_z43_w7007_7206",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        7007,
+        7206
+      ],
+      "count": 6,
+      "search_nodes": 31853,
+      "pair_calls": 31653,
+      "maximum_terminal_denominator": 94065410670
+    },
+    {
+      "branch": "x3_y7_z43_w7207_7224",
+      "arguments": [
+        7,
+        3,
+        7,
+        43,
+        "--next-range",
+        7207,
+        7224
+      ],
+      "count": 1,
+      "search_nodes": 234,
+      "pair_calls": 216,
+      "maximum_terminal_denominator": 94196038650
+    }
+  ]
+}

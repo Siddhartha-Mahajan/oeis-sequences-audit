@@ -1,0 +1,8 @@
+n 7
+prefix 3 7 43
+count 63090
+next_range 1821 1822
+search_nodes 849815
+pair_calls 849813
+maximum_terminal_denominator 721047694290
+seconds 29.5943

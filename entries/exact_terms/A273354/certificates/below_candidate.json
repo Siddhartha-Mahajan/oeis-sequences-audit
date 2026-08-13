@@ -1,0 +1,8 @@
+{
+  "exclusive_limit": 11177126654841000000,
+  "primitive_bases_below_limit": 6177,
+  "distinct_primitive_cube_scalings": 110969,
+  "square_multiplicity_three_candidates": [
+  ],
+  "solutions_below_limit": []
+}

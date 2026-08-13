@@ -1,0 +1,8 @@
+n 7
+prefix 3 7 171
+count 33
+next_range 0 0
+search_nodes 2019
+pair_calls 1966
+maximum_terminal_denominator 117983502
+seconds 0.0380823

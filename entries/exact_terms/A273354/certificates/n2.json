@@ -1,0 +1,10 @@
+{
+  "target_multiplicity": 2,
+  "status": "found",
+  "value": 4624776,
+  "max_sum": 5000000,
+  "max_first_cube_index": 135,
+  "distinct_cube_sums_examined": 12143,
+  "cube_pairs_examined": 12242,
+  "cube_groups_of_target_size_tested": 99
+}

@@ -1,0 +1,10 @@
+tested=19958400
+minimum=-2579770
+min_sequence=[4,6,1,5,9,10,0,8,2,3,7]
+maximum=2256911
+max_sequence=[3,6,8,2,10,0,1,7,9,4,5]
+max_absolute=2579770
+
+The 19,958,400 cases are one representative from each reversal pair among
+all 11! permutations. Reversing the defining sequence conjugates the Hankel
+matrix by the reversal permutation matrix and preserves its determinant.

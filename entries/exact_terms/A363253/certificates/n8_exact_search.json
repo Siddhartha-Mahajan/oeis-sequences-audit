@@ -1,0 +1,91 @@
+{
+  "sides": 8,
+  "status": "found",
+  "index": 16,
+  "value": 736,
+  "representations": 8,
+  "checked_through_index": 16,
+  "checked": [
+    {
+      "index": 1,
+      "value": 1,
+      "count": 1
+    },
+    {
+      "index": 2,
+      "value": 8,
+      "count": 1
+    },
+    {
+      "index": 3,
+      "value": 21,
+      "count": 1
+    },
+    {
+      "index": 4,
+      "value": 40,
+      "count": 1
+    },
+    {
+      "index": 5,
+      "value": 65,
+      "count": 1
+    },
+    {
+      "index": 6,
+      "value": 96,
+      "count": 1
+    },
+    {
+      "index": 7,
+      "value": 133,
+      "count": 1
+    },
+    {
+      "index": 8,
+      "value": 176,
+      "count": 1
+    },
+    {
+      "index": 9,
+      "value": 225,
+      "count": 2
+    },
+    {
+      "index": 10,
+      "value": 280,
+      "count": 2
+    },
+    {
+      "index": 11,
+      "value": 341,
+      "count": 3
+    },
+    {
+      "index": 12,
+      "value": 408,
+      "count": 2
+    },
+    {
+      "index": 13,
+      "value": 481,
+      "count": 3
+    },
+    {
+      "index": 14,
+      "value": 560,
+      "count": 4
+    },
+    {
+      "index": 15,
+      "value": 645,
+      "count": 3
+    },
+    {
+      "index": 16,
+      "value": 736,
+      "count": 8
+    }
+  ],
+  "trace_sha256": "df8441489b6e76fbbfcc8a8c876fc0cf83d6e94f05a1b012688c55c97759b74d"
+}
