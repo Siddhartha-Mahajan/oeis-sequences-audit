@@ -1,0 +1,12 @@
+A007234 functional-graph reduction certificate
+n 11
+vertices 39916800
+simple_edges 39845794
+fixed_points 1
+leaf_choices 6493949
+isolated_choices 21399301
+cycle_components 679680
+cycle_vertices 5529600
+answer 30658050
+cycle_length 6 count 316800
+cycle_length 10 count 362880

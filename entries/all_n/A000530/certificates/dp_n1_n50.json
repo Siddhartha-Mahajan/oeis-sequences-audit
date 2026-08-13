@@ -1,0 +1,352 @@
+[
+  {
+    "n": 1,
+    "a_n": 1,
+    "maximum_safe_prefix_length": 0,
+    "safe_prefixes_with_multiplicity": 1,
+    "state_transitions": 2
+  },
+  {
+    "n": 2,
+    "a_n": 5,
+    "maximum_safe_prefix_length": 4,
+    "safe_prefixes_with_multiplicity": 9,
+    "state_transitions": 18
+  },
+  {
+    "n": 3,
+    "a_n": 28,
+    "maximum_safe_prefix_length": 8,
+    "safe_prefixes_with_multiplicity": 55,
+    "state_transitions": 94
+  },
+  {
+    "n": 4,
+    "a_n": 226,
+    "maximum_safe_prefix_length": 12,
+    "safe_prefixes_with_multiplicity": 451,
+    "state_transitions": 366
+  },
+  {
+    "n": 5,
+    "a_n": 2077,
+    "maximum_safe_prefix_length": 16,
+    "safe_prefixes_with_multiplicity": 4153,
+    "state_transitions": 1174
+  },
+  {
+    "n": 6,
+    "a_n": 20770,
+    "maximum_safe_prefix_length": 20,
+    "safe_prefixes_with_multiplicity": 41539,
+    "state_transitions": 3062
+  },
+  {
+    "n": 7,
+    "a_n": 222884,
+    "maximum_safe_prefix_length": 24,
+    "safe_prefixes_with_multiplicity": 445767,
+    "state_transitions": 6966
+  },
+  {
+    "n": 8,
+    "a_n": 2529541,
+    "maximum_safe_prefix_length": 28,
+    "safe_prefixes_with_multiplicity": 5059081,
+    "state_transitions": 14378
+  },
+  {
+    "n": 9,
+    "a_n": 29995812,
+    "maximum_safe_prefix_length": 32,
+    "safe_prefixes_with_multiplicity": 59991623,
+    "state_transitions": 27022
+  },
+  {
+    "n": 10,
+    "a_n": 368025335,
+    "maximum_safe_prefix_length": 36,
+    "safe_prefixes_with_multiplicity": 736050669,
+    "state_transitions": 47646
+  },
+  {
+    "n": 11,
+    "a_n": 4637331008,
+    "maximum_safe_prefix_length": 40,
+    "safe_prefixes_with_multiplicity": 9274662015,
+    "state_transitions": 79642
+  },
+  {
+    "n": 12,
+    "a_n": 59687103424,
+    "maximum_safe_prefix_length": 44,
+    "safe_prefixes_with_multiplicity": 119374206847,
+    "state_transitions": 126902
+  },
+  {
+    "n": 13,
+    "a_n": 781671686963,
+    "maximum_safe_prefix_length": 48,
+    "safe_prefixes_with_multiplicity": 1563343373925,
+    "state_transitions": 194850
+  },
+  {
+    "n": 14,
+    "a_n": 10386703092609,
+    "maximum_safe_prefix_length": 52,
+    "safe_prefixes_with_multiplicity": 20773406185217,
+    "state_transitions": 289518
+  },
+  {
+    "n": 15,
+    "a_n": 139745901077363,
+    "maximum_safe_prefix_length": 56,
+    "safe_prefixes_with_multiplicity": 279491802154725,
+    "state_transitions": 418182
+  },
+  {
+    "n": 16,
+    "a_n": 1900741247492545,
+    "maximum_safe_prefix_length": 60,
+    "safe_prefixes_with_multiplicity": 3801482494985089,
+    "state_transitions": 589390
+  },
+  {
+    "n": 17,
+    "a_n": 26102952214842141,
+    "maximum_safe_prefix_length": 64,
+    "safe_prefixes_with_multiplicity": 52205904429684281,
+    "state_transitions": 813342
+  },
+  {
+    "n": 18,
+    "a_n": 361575380267391362,
+    "maximum_safe_prefix_length": 68,
+    "safe_prefixes_with_multiplicity": 723150760534782723,
+    "state_transitions": 1101470
+  },
+  {
+    "n": 19,
+    "a_n": 5047553495604339148,
+    "maximum_safe_prefix_length": 72,
+    "safe_prefixes_with_multiplicity": 10095106991208678295,
+    "state_transitions": 1465538
+  },
+  {
+    "n": 20,
+    "a_n": 70960695386598569362,
+    "maximum_safe_prefix_length": 76,
+    "safe_prefixes_with_multiplicity": 141921390773197138723,
+    "state_transitions": 1922014
+  },
+  {
+    "n": 21,
+    "a_n": 1003994923637970663710,
+    "maximum_safe_prefix_length": 80,
+    "safe_prefixes_with_multiplicity": 2007989847275941327419,
+    "state_transitions": 2486046
+  },
+  {
+    "n": 22,
+    "a_n": 14288148059654427415760,
+    "maximum_safe_prefix_length": 84,
+    "safe_prefixes_with_multiplicity": 28576296119308854831519,
+    "state_transitions": 3175718
+  },
+  {
+    "n": 23,
+    "a_n": 204424150153341238441230,
+    "maximum_safe_prefix_length": 88,
+    "safe_prefixes_with_multiplicity": 408848300306682476882459,
+    "state_transitions": 4012782
+  },
+  {
+    "n": 24,
+    "a_n": 2939034648147192397252116,
+    "maximum_safe_prefix_length": 92,
+    "safe_prefixes_with_multiplicity": 5878069296294384794504231,
+    "state_transitions": 5017182
+  },
+  {
+    "n": 25,
+    "a_n": 42444208193025423489789269,
+    "maximum_safe_prefix_length": 96,
+    "safe_prefixes_with_multiplicity": 84888416386050846979578537,
+    "state_transitions": 6215706
+  },
+  {
+    "n": 26,
+    "a_n": 615483878997101677181031130,
+    "maximum_safe_prefix_length": 100,
+    "safe_prefixes_with_multiplicity": 1230967757994203354362062259,
+    "state_transitions": 7632994
+  },
+  {
+    "n": 27,
+    "a_n": 8958991321065566035332679345,
+    "maximum_safe_prefix_length": 104,
+    "safe_prefixes_with_multiplicity": 17917982642131132070665358689,
+    "state_transitions": 9299446
+  },
+  {
+    "n": 28,
+    "a_n": 130863965271645176387143336931,
+    "maximum_safe_prefix_length": 108,
+    "safe_prefixes_with_multiplicity": 261727930543290352774286673861,
+    "state_transitions": 11248346
+  },
+  {
+    "n": 29,
+    "a_n": 1917728022881380913231878568293,
+    "maximum_safe_prefix_length": 112,
+    "safe_prefixes_with_multiplicity": 3835456045762761826463757136585,
+    "state_transitions": 13509430
+  },
+  {
+    "n": 30,
+    "a_n": 28187663833811419998813906509603,
+    "maximum_safe_prefix_length": 116,
+    "safe_prefixes_with_multiplicity": 56375327667622839997627813019205,
+    "state_transitions": 16122886
+  },
+  {
+    "n": 31,
+    "a_n": 415475900871655943371260327117411,
+    "maximum_safe_prefix_length": 120,
+    "safe_prefixes_with_multiplicity": 830951801743311886742520654234821,
+    "state_transitions": 19128442
+  },
+  {
+    "n": 32,
+    "a_n": 6139967353674334210413595617496974,
+    "maximum_safe_prefix_length": 124,
+    "safe_prefixes_with_multiplicity": 12279934707348668420827191234993947,
+    "state_transitions": 22569746
+  },
+  {
+    "n": 33,
+    "a_n": 90959214649051969022759164308135884,
+    "maximum_safe_prefix_length": 128,
+    "safe_prefixes_with_multiplicity": 181918429298103938045518328616271767,
+    "state_transitions": 26488846
+  },
+  {
+    "n": 34,
+    "a_n": 1350584969603597713774818423794810149,
+    "maximum_safe_prefix_length": 132,
+    "safe_prefixes_with_multiplicity": 2701169939207195427549636847589620297,
+    "state_transitions": 30933930
+  },
+  {
+    "n": 35,
+    "a_n": 20097044766673266652065423145933395460,
+    "maximum_safe_prefix_length": 136,
+    "safe_prefixes_with_multiplicity": 40194089533346533304130846291866790919,
+    "state_transitions": 35964362
+  },
+  {
+    "n": 36,
+    "a_n": 299656475101270251055195216981000278530,
+    "maximum_safe_prefix_length": 140,
+    "safe_prefixes_with_multiplicity": 599312950202540502110390433962000557059,
+    "state_transitions": 41630386
+  },
+  {
+    "n": 37,
+    "a_n": 4476590186904250918998180518378791653894,
+    "maximum_safe_prefix_length": 144,
+    "safe_prefixes_with_multiplicity": 8953180373808501837996361036757583307787,
+    "state_transitions": 47987162
+  },
+  {
+    "n": 38,
+    "a_n": 66997496929454049836454319747405379406957,
+    "maximum_safe_prefix_length": 148,
+    "safe_prefixes_with_multiplicity": 133994993858908099672908639494810758813913,
+    "state_transitions": 55103986
+  },
+  {
+    "n": 39,
+    "a_n": 1004422809228467654631929202441299435235607,
+    "maximum_safe_prefix_length": 152,
+    "safe_prefixes_with_multiplicity": 2008845618456935309263858404882598870471213,
+    "state_transitions": 63043858
+  },
+  {
+    "n": 40,
+    "a_n": 15082865507699310098642642979106344702368993,
+    "maximum_safe_prefix_length": 156,
+    "safe_prefixes_with_multiplicity": 30165731015398620197285285958212689404737985,
+    "state_transitions": 71875790
+  },
+  {
+    "n": 41,
+    "a_n": 226843315425299988307553533522450575629945461,
+    "maximum_safe_prefix_length": 160,
+    "safe_prefixes_with_multiplicity": 453686630850599976615107067044901151259890921,
+    "state_transitions": 81674682
+  },
+  {
+    "n": 42,
+    "a_n": 3416733619665429392849319115017018619769077551,
+    "maximum_safe_prefix_length": 164,
+    "safe_prefixes_with_multiplicity": 6833467239330858785698638230034037239538155101,
+    "state_transitions": 92513834
+  },
+  {
+    "n": 43,
+    "a_n": 51535889924653640485914292022798253990415179179,
+    "maximum_safe_prefix_length": 168,
+    "safe_prefixes_with_multiplicity": 103071779849307280971828584045596507980830358357,
+    "state_transitions": 104482118
+  },
+  {
+    "n": 44,
+    "a_n": 778385197987674865087764471663042270772249401731,
+    "maximum_safe_prefix_length": 172,
+    "safe_prefixes_with_multiplicity": 1556770395975349730175528943326084541544498803461,
+    "state_transitions": 117658798
+  },
+  {
+    "n": 45,
+    "a_n": 11771721042782284143669233710770386597543759288725,
+    "maximum_safe_prefix_length": 176,
+    "safe_prefixes_with_multiplicity": 23543442085564568287338467421540773195087518577449,
+    "state_transitions": 132142158
+  },
+  {
+    "n": 46,
+    "a_n": 178246951736920700565206046849927204295156605821913,
+    "maximum_safe_prefix_length": 180,
+    "safe_prefixes_with_multiplicity": 356493903473841401130412093699854408590313211643825,
+    "state_transitions": 148017162
+  },
+  {
+    "n": 47,
+    "a_n": 2702207410296878712835763581883990100918331933860098,
+    "maximum_safe_prefix_length": 184,
+    "safe_prefixes_with_multiplicity": 5404414820593757425671527163767980201836663867720195,
+    "state_transitions": 165378830
+  },
+  {
+    "n": 48,
+    "a_n": 41011787635359572799247300570071578353367623944844991,
+    "maximum_safe_prefix_length": 188,
+    "safe_prefixes_with_multiplicity": 82023575270719145598494601140143156706735247889689981,
+    "state_transitions": 184350154
+  },
+  {
+    "n": 49,
+    "a_n": 623121078651311928172490822325434559011259991273812163,
+    "maximum_safe_prefix_length": 192,
+    "safe_prefixes_with_multiplicity": 1246242157302623856344981644650869118022519982547624325,
+    "state_transitions": 205024046
+  },
+  {
+    "n": 50,
+    "a_n": 9477445937970947982274905666367581078225599344024301633,
+    "maximum_safe_prefix_length": 196,
+    "safe_prefixes_with_multiplicity": 18954891875941895964549811332735162156451198688048603265,
+    "state_transitions": 227520242
+  }
+]
