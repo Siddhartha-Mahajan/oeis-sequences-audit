@@ -1,0 +1,8 @@
+build/
+results/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+OEIS_EDITS.md
+OEIS_EDIT.md
