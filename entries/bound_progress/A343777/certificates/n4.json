@@ -1,0 +1,9 @@
+{
+  "sides": 4,
+  "status": "found",
+  "value": 554503705,
+  "max_sum": 1000000000,
+  "max_start_index": 31622,
+  "distinct_represented_sums_examined": 1200890,
+  "intervals_examined": 1205747
+}

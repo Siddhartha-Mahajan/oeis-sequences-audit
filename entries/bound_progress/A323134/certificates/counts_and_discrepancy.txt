@@ -1,0 +1,13 @@
+n=2 rooted_fixed_first=6 inequivalent=3 OEIS=3
+n=3 rooted_fixed_first=102 inequivalent=13 OEIS=13
+n=4 rooted_fixed_first=2370 inequivalent=178 OEIS=178
+n=5 rooted_fixed_first=58840 inequivalent=3034 OEIS=3031
+n=6 rooted_fixed_first=1542210 inequivalent=64877 OEIS=64866
+n=7 rooted_fixed_first=42045864 inequivalent=1503790 OEIS=not_listed
+
+The program treats a polygon as a simple closed straight-edge knight walk,
+up to translation, the eight square-lattice symmetries, cyclic shift, and
+reversal. It includes straight continuations, as does the linked source page.
+The first discrepancy occurs at perimeter 10. This is an audit finding, not
+yet a proposed correction: the historical computation's precise equivalence
+implementation must be compared before editing OEIS.

@@ -1,0 +1,8 @@
+{
+  "sides": 5,
+  "status": "not_found",
+  "max_sum": 10000000000000,
+  "max_start_index": 2581989,
+  "distinct_represented_sums_examined": 646871368,
+  "intervals_examined": 647069021
+}
