@@ -101,7 +101,7 @@
 }
 
 \newcommand{\seq}[1]{\href{https://oeis.org/#1}{\texttt{#1}}}
-\newcommand{\repo}{\href{https://github.com/Siddhartha-Mahajan/oeis-sequences-audit}{\texttt{oeis-sequences-audit}}}
+\newcommand{\repo}{\url{https://github.com/Siddhartha-Mahajan/oeis-sequences-audit}}
 \newcommand{\pathcode}[1]{\texttt{\detokenize{#1}}}
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -113,6 +113,7 @@
 \DeclareMathOperator{\Fix}{Fix}
 \DeclareMathOperator{\per}{per}
 \DeclareMathOperator{\val}{val}
+\date{}
 
 \begin{document}
 
@@ -138,8 +139,6 @@
   \(^{*}\)Corresponding author:
   \href{mailto:siddharthamahajan03@gmail.com}{\texttt{siddharthamahajan03@gmail.com}}\par
   \href{mailto:paras@lossfunk.com}{\texttt{paras@lossfunk.com}}\par}
-  \vspace{0.65cm}
-  {\small Code, certificates, and ancillary data: \repo\par}
   \vfill
   \begin{minipage}{0.90\textwidth}
   \small
@@ -166,7 +165,7 @@
   computational certificates.
   \end{minipage}
   \vfill
-  {\small August 2026\par}
+  {\small\repo\par}
 \end{titlepage}
 \hypersetup{pageanchor=true}
 
@@ -195,8 +194,12 @@
 \addcontentsline{toc}{section}{Data and code availability}
 All source code, exact certificates, witness files, ancillary values, proposed
 OEIS edits, and the LaTeX source of this manuscript are available in the public
-repository \repo.  The archive includes a SHA-256 manifest covering every
-packaged source and certificate file.
+repository:
+\begin{center}
+\repo
+\end{center}
+The archive includes a SHA-256 manifest covering every packaged source and
+certificate file.
 
 \section*{Declaration on AI-assisted tools}
 \addcontentsline{toc}{section}{Declaration on AI-assisted tools}
