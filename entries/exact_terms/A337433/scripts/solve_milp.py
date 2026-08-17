@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Solve A337433 exactly as a binary MILP.
+"""Search A337433 as a binary MILP.
 
 Each vertex receives one value.  If it receives k, every value 1,...,k-1
 must occur at a neighboring vertex.  HiGHS supplies the primal solution and

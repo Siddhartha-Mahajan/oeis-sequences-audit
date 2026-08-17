@@ -1,35 +1,23 @@
-# Exact terms and corrections: priority order
+# Exact terms and corrections
 
 These packages prove finite exact values or corrections. The order emphasizes
-corrections, nonexistence proofs, difficult minimality arguments, and the
-number of genuinely new terms.
+corrections, nonexistence proofs, and complete minimality certificates.
 
-1. **A002887 — very high importance.** It corrects the published `a(5)=50`
-   to `48` and determines six consecutive values through `a(10)` by a complete
-   structural enumeration with explicit tree witnesses.
-2. **A363253 — very high importance.** It proves two missing internal values
-   are `-1`, combining an unconditional conductor argument with exact finite
-   verification. This is stronger than merely extending a computational list.
-3. **A273354 — very high importance.** The enormous exact value `a(3)` comes
-   with both representation identities and a complete minimality certificate.
-4. **A003167 — high importance.** The exact `a(7)` is obtained by an exhaustive
-   Egyptian-fraction enumeration with a compact independently checked branch
-   certificate.
-5. **A075099 — high importance.** Five difficult optimization values are
-   proved exact, including a separated value beyond the still-open `a(11)`.
-6. **A001072 — high importance.** A complete graph-generation computation
-   proves the next exact term and supplies direct and nauty-based checks.
-7. **A368355 — medium-high importance.** One exhaustive computation proves
-   the next exact signed extrema for three companion sequences at once:
+1. **A002887.** Corrects `a(5)=50` to `48` and determines six consecutive
+   values through `a(10)` by exhaustive structural enumeration.
+2. **A363253.** Proves the two missing internal values `a(6)=a(7)=-1` by a
+   conductor argument plus exact finite-prefix checks.
+3. **A273354.** Determines the large value `a(3)` and proves minimality over a
+   complete finite candidate set.
+4. **A001072.** A complete graph-generation computation gives `a(15)=41142`
+   with direct and nauty-based checks.
+5. **A075099.** An exact straight-line-program MILP gives
+   `a(7),...,a(10)=151,276,556,1066` and the separated exact value
+   `a(12)=4171`; every completed run has matching global bounds and zero gap.
+6. **A337433.** An exact binary MILP gives `a(7)=87`, with a complete labeling
+   and an independent witness verifier.
+7. **A368355.** One exhaustive computation gives the next signed extrema for
    A368353, A368354, and A368355.
-8. **A337433 — medium importance.** A zero-gap MILP record and explicit
-   witness prove the next exact triangular-lattice optimum.
-9. **A000157 — medium importance.** It repairs an underdefined name and adds
-   five exact large-index values, but the sequence is closely tied to the
-   already known companion A000370.
-10. **A323560 — modest importance.** The next term is exact and exhaustively
-    reproducible, but it is a single straightforward extension with less
-    structural payoff than the entries above.
+8. **A323560.** Exact exhaustive enumeration proves `a(19)=36001752`.
 
-The ranking is a submission priority, not a claim that one subject is
-intrinsically more important than another.
+The ranking is a submission priority, not a comparison of subject areas.
