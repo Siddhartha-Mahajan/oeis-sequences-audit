@@ -1,28 +1,35 @@
 # Reproducibility
 
-Run commands from the relevant `entries/<category>/AXXXXXX/` directory. Python witness
-checkers use the standard library except A306795, whose certificate verifier
-uses SymPy. The two MILP solvers use NumPy and SciPy/HiGHS.
-
-Install optional Python dependencies with:
+Run commands from the relevant `entries/<category>/AXXXXXX/` directory. Most
+witness checkers use only the Python standard library. A306795 uses SymPy;
+the MILP packages use NumPy and SciPy/HiGHS.
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-C++ sources use C++20 and can be compiled with any recent Clang or GCC:
+C++ sources use C++20 and can be compiled with a recent Clang or GCC:
 
 ```bash
 mkdir -p build
 c++ -O3 -std=c++20 scripts/PROGRAM.cpp -o build/PROGRAM
 ```
 
-The per-entry manuscripts give exact commands and distinguish quick witness
-checks from expensive exhaustive reruns. Generated binaries and replay outputs
-belong in `build/` or `results/` and are intentionally excluded.
+The per-entry notes distinguish quick certificate checks from expensive full
+regenerations. Generated binaries and replay outputs belong in `build/` or
+`results/`.
 
-To verify file integrity after a release:
+The combined manuscript source and PDF are in `manuscript/`. Rebuild it with:
 
 ```bash
-shasum -a 256 -c MANIFEST.sha256
+cd manuscript
+latexmk -pdf main.tex
+```
+
+The source also builds with `tectonic main.tex`.
+
+To verify file integrity after extraction:
+
+```bash
+sha256sum -c MANIFEST.sha256
 ```

@@ -8,9 +8,10 @@ root = Path(__file__).resolve().parents[1]
 target = root / "MANIFEST.sha256"
 rows = []
 for path in sorted(root.rglob("*")):
-    if (not path.is_file() or path == target
+    if (not path.is_file() or path == target or path.name == ".DS_Store"
             or path.name in {"OEIS_EDIT.md", "OEIS_EDITS.md"}
-            or any(part in {".git", "__pycache__", "build", ".venv"} for part in path.parts)):
+            or any(part in {".git", "__pycache__", "build", "results", ".venv"}
+                   for part in path.parts)):
         continue
     digest = hashlib.sha256()
     with path.open("rb") as handle:

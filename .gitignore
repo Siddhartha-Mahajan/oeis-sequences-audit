@@ -6,3 +6,4 @@ __pycache__/
 .venv/
 OEIS_EDITS.md
 OEIS_EDIT.md
+.uv-cache/
