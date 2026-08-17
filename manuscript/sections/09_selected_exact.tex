@@ -1,0 +1,215 @@
+\section{Selected exact finite determinations}
+\label{sec:selected-exact}
+
+The all-\(n\) results above are accompanied by exact finite determinations whose
+proofs combine a structural reduction with a complete certificate.  This
+section records the strongest examples in enough detail to expose the
+exhaustiveness argument.
+
+\subsection{Cutting centers of trees: \texorpdfstring{\seq{A002887}}{A002887}}
+
+For a tree \(T\) of order \(N\), delete a vertex \(v\) and let the component
+orders be \(s_1,\ldots,s_d\).  The cutting number is
+\begin{equation}
+ c_T(v)=\sum_{i<j}s_is_j
+       =\frac{(N-1)^2-\sum_i s_i^2}{2}.
+ \label{eq:a002887-cut}
+\end{equation}
+Harary and Ostrand proved that the vertices of maximum cutting number form a
+path \citep{HararyOstrand1971}.  Suppose the intended center path is
+\(v_1,\ldots,v_k\).  Removing its path edges leaves rooted components of orders
+\(b_1,\ldots,b_k\).  Let \(q_i\) be the sum of the squared orders of the
+off-path branches incident with \(v_i\), and put
+\[
+ L_i=\sum_{j<i}b_j,
+ \qquad
+ R_i=\sum_{j>i}b_j.
+\]
+The path vertices have a common cutting number exactly when
+\begin{equation}
+ L_i^2+R_i^2+q_i=K
+ \qquad(1\le i\le k)
+ \label{eq:a002887-profile}
+\end{equation}
+for one integer \(K\).  Their common value is
+\(( (N-1)^2-K)/2\).
+
+For fixed \(N\) and proposed center value \(C\), call a rooted tree of order
+\(s\) safe when every vertex in it has cutting number strictly below \(C\)
+after the root is attached to an outside component of order \(N-s\).  If the
+root has safe child-subtrees of orders \(t_1,\ldots,t_d\), with
+\(\sum t_i=s-1\) and \(q=\sum t_i^2\), its cutting number is
+\begin{equation}
+ (N-s)(s-1)+\frac{(s-1)^2-q}{2}.
+ \label{eq:a002887-safe}
+\end{equation}
+Thus safety is characterized recursively by an exact integer-partition
+dynamic program.  This condition is necessary by deleting the root and
+sufficient by attaching witnessing safe subtrees.  Enumerating positive
+compositions \((b_1,\ldots,b_k)\), exact attainable square sums in
+\cref{eq:a002887-profile}, and the safe-subtree spectra therefore loses no
+trees.
+
+Searching orders increasingly gives
+\begin{center}
+\begin{tabular}{@{}c*{10}{r}@{}}
+\toprule
+\(k\) & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\midrule
+minimum \(N\) & 3 & 4 & 7 & 10 & 48 & 48 & 122 & 122 & 264 & 264 \\
+\bottomrule
+\end{tabular}
+\end{center}
+The value at \(k=5\) corrects 50 to 48.  Every accepted profile is realized as
+an explicit edge list; an independent checker deletes every vertex,
+recomputes all component orders and cutting numbers, and verifies that the
+maximizers are exactly the intended path.
+
+\subsection{Three square and three cube representations: \texorpdfstring{\seq{A273354}}{A273354}}
+
+Let \(r_2^+(N)\) and \(r_3^+(N)\) be the numbers of unordered positive pairs
+representing \(N\) as a sum of two squares and two cubes.  The exact third term
+is
+\begin{equation}
+ \boxed{\seq{A273354}(3)=11177126654841000000.}
+ \label{eq:a273354-value}
+\end{equation}
+Put \(N_0=11177126654841000000=3343221000^2\).  Direct integer arithmetic gives
+exactly the three cube representations
+\begin{align*}
+N_0&=279300^3+2234400^3\\
+   &=790020^3+2202480^3\\
+   &=1256850^3+2094750^3.
+\end{align*}
+Its factorization is
+\[
+ N_0=2^6 3^6 5^6 7^6 19^4.
+\]
+The sum-of-two-squares divisor formula gives exactly three positive unordered
+square representations; the certificate lists them explicitly.
+
+For minimality, suppose \(M<N_0\) has at least three positive-cube
+representations.  Dividing all six coordinates by their common gcd writes
+\(M=g^3m\), where \(m\) is a primitive three-cube value.  Thus every candidate
+occurs among the cubic multiples below \(N_0\) of the primitive values in the
+complete \seq{A003825} ancillary list.  There are 110969 distinct candidates.
+Each was factored exactly using deterministic Miller-Rabin and Pollard-rho
+arithmetic, and the positive-square-pair formula was evaluated from the prime
+factorization.  None has \(r_2^+(M)=3\).  An independent verifier regenerates
+the candidate set, checks primality and factor products, recomputes the square
+counts, and directly scans all cube pairs of \(N_0\).
+
+\subsection{Missing polygonal cases: \texorpdfstring{\seq{A363253}}{A363253}}
+
+For \(s\ge3\), let
+\[
+ P_s(k)=\frac{(s-2)k^2-(s-4)k}{2}
+\]
+be the \(k\)-th positive \(s\)-gonal number.  Representations are sums of
+distinct positive \(s\)-gonal numbers, including the singleton representation.
+The missing cases are
+\begin{equation}
+ \boxed{\seq{A363253}(6)=\seq{A363253}(7)=-1.}
+ \label{eq:a363253-values}
+\end{equation}
+
+The proof uses a conductor lemma.  If subset sums of
+\(P_s(1),\ldots,P_s(m)\) cover every integer in \([L,U]\) and
+\(P_s(m+1)\le U-L+1\), then adjoining \(P_s(m+1)\) makes the old and shifted
+intervals overlap.  Since the successive polygonal numbers in the relevant
+range grow by a factor less than two, the overlap persists indefinitely.
+Exact bitset calculations show that
+\begin{align*}
+ P_6(1),\ldots,P_6(11)&\text{ cover }[268,678],\\
+ P_7(1),\ldots,P_7(13)&\text{ cover }[388,1523].
+\end{align*}
+Therefore every integer at least 268 is a distinct hexagonal subset sum and
+every integer at least 388 is a distinct heptagonal subset sum.
+
+For \(k\ge68\), the six differences
+\(P_6(k)-P_6(k-d)\), \(1\le d\le6\), lie beyond the conductor and below
+\(P_6(k-d)\).  Appending the distinct largest summands
+\(P_6(k-d)\) gives six non-singleton representations, hence at least seven in
+total.  The analogous seven differences for heptagonal numbers work for
+\(k\ge79\), giving at least eight representations.  Exact finite-prefix subset
+DP rules out the desired multiplicities before these thresholds.
+
+\subsection{Minimally 2-edge-connected graphs: \texorpdfstring{\seq{A001072}}{A001072}}
+
+The exact new term is
+\begin{equation}
+ \boxed{\seq{A001072}(15)=41142.}
+ \label{eq:a001072-value}
+\end{equation}
+By the Whitney ear theorem \citep{Whitney1932}, every 2-edge-connected graph is
+built from a cycle by adding ears.  In a minimal 2-edge-connected simple graph,
+every later ear has a new internal vertex, and every prefix remains minimal.
+The generator recursively adds all open ears with at least one new internal
+vertex and all simple closed ears with at least two, retaining exactly the
+graphs that are connected and bridgeless but cease to be so after any edge
+deletion.  Canonical graph6 records produced by nauty
+\citep{McKayPiperno2014} remove isomorphic duplicates.
+
+The computation gives 203421 accepted precanonical candidates and 41142
+canonical records at order 15, after reproducing every published term through
+order 14.  An independent verifier uses a different minimality test: for each
+edge \(e\), it checks that \(G-e\) is connected and finds an edge \(f\) for
+which \(G-\{e,f\}\) is disconnected.  A separate canonicalization pass leaves
+the count and record hash unchanged.
+
+\subsection{Free-monoid multiplication programs: \texorpdfstring{\seq{A075099}}{A075099}}
+
+Every binary word of length \(n\) requires one final multiplication.  A
+shorter word contributes one additional multiplication exactly when it is
+retained as a reusable intermediate.  Binary variables select these
+intermediates.  For every selected word and every required target, split
+variables require a cut whose two factors are generators or selected shorter
+words.  Since factors are strictly shorter, the local split conditions are
+equivalent to a valid multiplication program ordered by word length.
+
+The resulting mixed-integer program minimizes \(2^n\) plus the number of
+selected intermediates.  Completed HiGHS runs have matching primal and global
+bounds and zero gap, giving
+\begin{equation}
+ \boxed{a(7)=151,\quad a(8)=276,\quad a(9)=556,\quad
+        a(10)=1066,\quad a(12)=4171.}
+ \label{eq:a075099-values}
+\end{equation}
+The selected programs are checked independently by recursively verifying a
+valid factorization of every intermediate and every target.  The stored
+time-limited run at \(n=11\) proves only
+\(2118\le a(11)\le2138\); it is not used in
+\cref{eq:a075099-values}.
+
+\subsection{Triangular-lattice labeling: \texorpdfstring{\seq{A337433}}{A337433}}
+
+For the 28 nodes of the order-seven triangular array, binary variables assign
+one label in \(\{1,\ldots,7\}\) to each node.  If a node receives label \(k\),
+the model requires an occurrence of every label \(1,\ldots,k-1\) among its
+neighbors.  This is exactly the defining local condition.  A completed
+53,115-node branch-and-bound computation has objective and global bound 87
+with zero gap.  The resulting labeling is independently checked node by node,
+and therefore
+\begin{equation}
+ \boxed{\seq{A337433}(7)=87.}
+ \label{eq:a337433-value}
+\end{equation}
+
+\subsection{Additional exact values}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}>{\ttfamily}l l X@{}}
+\toprule
+Entry & Exact result & Certificate \\
+\midrule
+A323560 & \(a(19)=36001752\) & Exhaustive reversed trapped-knight paths, with a Held-Karp lower bound for the unvisited required neighbors. \\
+A368353 & \(a(6)=-2579770\) & \multirow{3}{=}{Exhaustive \(11!/2\) reversal classes of \(6\times6\) Hankel matrices; exact fraction-free Bareiss determinants \citep{Bareiss1968}.} \\
+A368354 & \(a(6)=2256911\) & \\
+A368355 & \(a(6)=2579770\) & \\
+\bottomrule
+\end{tabularx}
+\caption{Further exact finite determinations.}
+\label{tab:additional-exact}
+\end{table}

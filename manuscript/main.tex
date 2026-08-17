@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext}
+\usepackage{amsmath,amsthm,mathtools}
+\usepackage{newtxmath}
+\usepackage[final]{microtype}
+\usepackage[a4paper,margin=27mm,headheight=15pt]{geometry}
+\usepackage{booktabs,longtable,tabularx,array,multirow}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{url}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage[most]{tcolorbox}
+\usepackage{doi}
+
+\definecolor{LossInk}{HTML}{17263A}
+\definecolor{LossGray}{HTML}{5A6470}
+\definecolor{LossPale}{HTML}{F4F6F8}
+\definecolor{LossRule}{HTML}{B8C1CB}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=LossInk,
+  citecolor=LossInk,
+  urlcolor=LossInk,
+  pdftitle={All-n Formulae and Certified Advances for Difficult OEIS Sequences},
+  pdfauthor={Siddhartha Mahajan and Paras Chopra},
+  pdfsubject={Integer sequences, exact enumeration, generating functions, certificates},
+  pdfkeywords={OEIS, enumeration, Burnside lemma, functional graphs, generating functions, certificates}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist[itemize]{leftmargin=1.45em,itemsep=0.2em,topsep=0.3em}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=0.2em,topsep=0.3em}
+\renewcommand{\arraystretch}{1.18}
+\captionsetup{font=small,labelfont=bf}
+\allowdisplaybreaks[2]
+
+\titleformat{\section}
+  {\Large\bfseries\color{LossInk}}
+  {\thesection}{0.7em}{}
+\titleformat{\subsection}
+  {\large\bfseries\color{LossInk}}
+  {\thesubsection}{0.65em}{}
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{LossInk}}
+  {\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{2.2em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1.6em}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Lossfunk Research Laboratory}}
+\fancyhead[R]{\small\textsc{OEIS sequence advances}}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newtcolorbox{resultbox}[1][]{
+  enhanced,
+  breakable,
+  colback=LossPale,
+  colframe=LossInk,
+  boxrule=0.65pt,
+  arc=1.5mm,
+  left=2.3mm,right=2.3mm,top=1.8mm,bottom=1.8mm,
+  fonttitle=\bfseries,
+  title=#1
+}
+
+\lstdefinestyle{repo}{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  rulecolor=\color{LossRule},
+  backgroundcolor=\color{LossPale},
+  xleftmargin=0.6em,
+  xrightmargin=0.6em,
+  aboveskip=0.7em,
+  belowskip=0.7em,
+  showstringspaces=false
+}
+
+\newcommand{\seq}[1]{\href{https://oeis.org/#1}{\texttt{#1}}}
+\newcommand{\repo}{\href{https://github.com/Siddhartha-Mahajan/oeis-sequences-audit}{\texttt{oeis-sequences-audit}}}
+\newcommand{\pathcode}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\val}{val}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+  \thispagestyle{empty}
+  \centering
+  \vspace*{-1.1cm}
+  \includegraphics[width=0.72\textwidth]{lossfunk-logo.png}\par
+  \vspace{0.65cm}
+  {\color{LossInk}\rule{0.92\textwidth}{0.75pt}}\par
+  \vspace{0.75cm}
+  {\fontsize{25}{30}\selectfont\bfseries\color{LossInk}
+  All-\(n\) Formulae and Certified Advances\\[0.2em]
+  for Difficult OEIS Sequences\par}
+  \vspace{1.0cm}
+  {\Large Siddhartha Mahajan\(^{1,*}\) and Paras Chopra\(^{1}\)\par}
+  \vspace{0.6cm}
+  {\normalsize
+  \(^{1}\)Lossfunk Research Laboratory, Bengaluru, Karnataka, India\par}
+  \vspace{0.35cm}
+  {\small
+  \(^{*}\)Corresponding author:
+  \href{mailto:siddharthamahajan03@gmail.com}{\texttt{siddharthamahajan03@gmail.com}}\par
+  \href{mailto:paras@lossfunk.com}{\texttt{paras@lossfunk.com}}\par}
+  \vspace{0.65cm}
+  {\small Code, certificates, and ancillary data: \repo\par}
+  \vfill
+  \begin{minipage}{0.90\textwidth}
+  \small
+  \textbf{Abstract.}
+  We give exact all-dimension formulae or recurrences for five short and difficult
+  entries of the On-Line Encyclopedia of Integer Sequences: \seq{A000530},
+  \seq{A003167}, \seq{A005787}, \seq{A006545}, and
+  \seq{A007234}.  The methods combine run-composition counting, finite
+  Egyptian-fraction recursion, affine-slice
+  inclusion-exclusion, unlabelled cycle constructions, and weighted dynamic
+  programming on permutation power-map functional graphs.  The last method
+  extends from squaring to every fixed map \(\sigma\mapsto\sigma^d\).
+  We also record exact terms and corrections for a further collection of OEIS
+  entries.  Each computational statement is paired
+  with an explicit witness, an exhaustive partition of the search, or an exact
+  arithmetic checker.  In particular, the
+  results include corrected values for \seq{A007234} and \seq{A002887}, the
+  exact value \(\seq{A003167}(7)=155068098\), five exact values of
+  \seq{A075099}, and \(\seq{A337433}(7)=87\).
+
+  \vspace{0.55em}
+  \textbf{Keywords:} integer sequences; exact enumeration; Burnside's lemma;
+  functional graphs; unlabelled generating functions; Egyptian fractions;
+  computational certificates.
+  \end{minipage}
+  \vfill
+  {\small August 2026\par}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\input{sections/01_introduction}
+\input{sections/03_a000530}
+\input{sections/04_a003167}
+\input{sections/05_a005787}
+\input{sections/06_a006545}
+\input{sections/07_a007234}
+\input{sections/09_selected_exact}
+\input{sections/10_reproducibility}
+\input{sections/11_conclusion}
+
+\appendix
+\input{sections/appendix_results}
+\input{sections/appendix_computation}
+\input{sections/appendix_replay}
+
+\section*{Data and code availability}
+\addcontentsline{toc}{section}{Data and code availability}
+All source code, exact certificates, witness files, ancillary values, proposed
+OEIS edits, and the LaTeX source of this manuscript are available in the public
+repository \repo.  The archive includes a SHA-256 manifest covering every
+packaged source and certificate file.
+
+\section*{Declaration on AI-assisted tools}
+\addcontentsline{toc}{section}{Declaration on AI-assisted tools}
+AI-assisted software was used in exploratory computation, implementation, and
+editorial preparation.  Every mathematical claim reported here is supported
+by the proofs or exact certificates described in the article and accompanying
+repository.  The authors reviewed the resulting statements and take
+responsibility for the content of the work.
+
+
+\begingroup
+\small
+\setlength{\bibsep}{0.25em}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\endgroup
+
+\end{document}

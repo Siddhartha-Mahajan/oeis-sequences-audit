@@ -1,0 +1,208 @@
+\section{Power-map-free subsets of symmetric groups: \texorpdfstring{\seq{A007234}}{A007234}}
+\label{sec:a007234}
+
+Let \(F_n\) be the maximum cardinality of a subset \(X\subseteq S_n\) such
+that
+\begin{equation}
+ \sigma\in X\quad\Longrightarrow\quad \sigma^2\notin X.
+ \label{eq:a007234-condition}
+\end{equation}
+Equivalently, \(F_n\) is the independence number of the functional graph of
+the squaring map, with a looped vertex forbidden.  Bouchard and Yeh studied
+this general \(f\)-free-set problem and reported the first values
+\citep{BouchardYeh1992}.  The conjugacy-type recurrence below corrects the last
+two of those values and extends the sequence to every \(n\).
+
+\subsection{Cycle types and square-root multiplicities}
+
+Write a cycle type as \(\lambda=1^{m_1}2^{m_2}\cdots n^{m_n}\) and put
+\begin{equation}
+ z_\lambda=\prod_{j=1}^{n}j^{m_j}m_j!.
+ \label{eq:a007234-z}
+\end{equation}
+The conjugacy class has size \(n!/z_\lambda\).  Let \(q(\mu)\) be the cycle
+type obtained by squaring a permutation of type \(\mu\): an odd \(j\)-cycle
+remains a \(j\)-cycle, while an even \(2j\)-cycle becomes two \(j\)-cycles.
+
+\begin{lemma}[Uniform root fibers]
+\label{lem:a007234-roots}
+If \(q(\mu)=\lambda\), then every fixed permutation of type \(\lambda\) has
+exactly
+\begin{equation}
+ r(\lambda,\mu)=\frac{z_\lambda}{z_\mu}
+ \label{eq:a007234-roots}
+\end{equation}
+square roots of type \(\mu\).
+\end{lemma}
+
+\begin{proof}
+The squaring map sends the conjugacy class of \(\mu\) equivariantly into the
+class of \(\lambda\).  Its image is nonempty and invariant under conjugation;
+hence it is the whole target class.  Equivariance also makes every fiber have
+the same size.  Dividing the source-class size \(n!/z_\mu\) by the target-class
+size \(n!/z_\lambda\) gives \cref{eq:a007234-roots}.
+\end{proof}
+
+\subsection{Reverse trees}
+
+For a type \(\lambda\) containing an even part, let \(E_\lambda\) and
+\(I_\lambda\) be the maximum sizes of an independent set in the reverse tree
+below one permutation of type \(\lambda\), conditional on excluding or
+including its root.  These values depend only on the type: conjugation carrying
+one root permutation to another is an isomorphism of their rooted reverse
+functional graphs.  Distinct square roots have disjoint reverse subtrees,
+because every permutation has a unique square.  Therefore
+\begin{align}
+ E_\lambda&=\sum_{q(\mu)=\lambda}
+ r(\lambda,\mu)\max\{E_\mu,I_\mu\},
+ \label{eq:a007234-E}\\
+ I_\lambda&=1+\sum_{q(\mu)=\lambda}
+ r(\lambda,\mu)E_\mu.
+ \label{eq:a007234-I}
+\end{align}
+These equations are acyclic.  Let
+\[
+ v(\lambda)=\max\{v_2(j):m_j(\lambda)>0\}.
+\]
+If \(\lambda\) has an even part and \(q(\mu)=\lambda\), then
+\(v(\mu)=v(\lambda)+1\): a target cycle having maximal 2-adic valuation can
+only arise from a cycle twice as long, and no source cycle can have larger
+valuation without producing a larger target valuation.  Processing types in
+descending \(v\) therefore determines all nonperiodic states.  The reverse
+trees are finite because cycle lengths cannot be doubled indefinitely inside
+\(S_n\).
+
+If all parts of \(\lambda\) are odd, the same formulae determine the tree
+attached to a periodic cycle vertex after omitting the unique same-type root.
+Indeed, \(q(\lambda)=\lambda\) and
+\(r(\lambda,\lambda)=1\); that root is the predecessor on the directed cycle,
+not a child in the attached tree.
+
+\subsection{Periodic conjugacy classes}
+
+For an all-odd type \(\lambda\), put
+\begin{equation}
+ o_\lambda=\lcm\{j:m_j(\lambda)>0\},
+ \qquad
+ L_\lambda=\ord_{o_\lambda}(2),
+ \label{eq:a007234-period}
+\end{equation}
+with \(L_\lambda=1\) when \(o_\lambda=1\).  Every permutation in the class has
+order \(o_\lambda\), so its squaring orbit has length \(L_\lambda\).  The
+class splits into
+\begin{equation}
+ N_\lambda=\frac{n!/z_\lambda}{L_\lambda}
+ \label{eq:a007234-numbercycles}
+\end{equation}
+directed cycles.
+
+Let \(g_\lambda=\max\{0,I_\lambda-E_\lambda\}\).  Excluding every cycle root
+contributes \(L_\lambda E_\lambda\).  Including a nonadjacent set of cycle
+roots gains \(g_\lambda\) per selected root, so a cycle of length greater than
+one contributes
+\begin{equation}
+ L_\lambda E_\lambda+
+ \left\lfloor\frac{L_\lambda}{2}\right\rfloor g_\lambda.
+ \label{eq:a007234-cycleweight}
+\end{equation}
+When \(L_\lambda=1\), the root has a loop and is forbidden, so the contribution
+is \(E_\lambda\).
+
+\begin{theorem}[Conjugacy-type recurrence]
+\label{thm:a007234}
+Equations
+\cref{eq:a007234-roots,eq:a007234-E,eq:a007234-I,eq:a007234-period,eq:a007234-numbercycles,eq:a007234-cycleweight}
+form an exact finite recurrence for \(F_n\).  Explicitly,
+\begin{equation}
+ F_n=\sum_{\lambda\text{ all odd}}N_\lambda
+ \begin{cases}
+ E_\lambda,&L_\lambda=1,\\[2mm]
+ L_\lambda E_\lambda+
+ \lfloor L_\lambda/2\rfloor g_\lambda,&L_\lambda>1.
+ \end{cases}
+ \label{eq:a007234-main}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Every finite functional graph is a disjoint union of directed cycles with
+rooted in-trees attached.  The reverse-tree states
+\cref{eq:a007234-E,eq:a007234-I} are the usual include/exclude dynamic
+program, with root multiplicities supplied by
+\cref{lem:a007234-roots}.  The valuation ordering proves that these states are
+computed without circular dependence away from all-odd types.  On an all-odd
+class the squaring map is a permutation with cycle length
+\(L_\lambda\), and the same-type predecessor has been removed from the
+attached tree.  The maximum-weight independent set on each directed cycle is
+\cref{eq:a007234-cycleweight}, with the loop exception at length one.
+Summing all components yields \cref{eq:a007234-main}.
+\end{proof}
+
+The recurrence begins, with offset one,
+\[
+\begin{aligned}
+0,&\ 1,\ 4,\ 16,\ 72,\ 522,\ 3390,\ 29409,\ 267561,\\
+&2820600,\ 30658050,\ 377859960,\ 4866471720,\\
+&70224099120,\ 1052687890800,\ 17121988170000,\ldots.
+\end{aligned}
+\]
+Thus the values formerly reported as \(3642\) and \(30753\) at \(n=7,8\) are
+corrected to
+\begin{equation}
+ \boxed{F_7=3390,\qquad F_8=29409.}
+ \label{eq:a007234-corrections}
+\end{equation}
+
+The recurrence agrees through \(n=50\) with its stored exact table.  Complete
+functional graphs through \(S_{11}\), two independent Python component
+algorithms, and an exhaustive audit of every square-root fiber through
+\(S_7\) give structurally independent checks.  Explicit maximum-set rank lists
+for \(n=7,8,9\) certify the lower-bound side directly.
+
+\subsection{Every fixed power map}
+
+The argument extends without a change of principle to
+\(P_d:S_n\to S_n\), \(P_d(\sigma)=\sigma^d\), for any fixed \(d\ge2\).  A
+cycle of length \(j\) becomes \(\gcd(j,d)\) cycles of length
+\(j/\gcd(j,d)\).  Let \(q_d(\mu)\) be the induced type map.  Equivariance gives
+\begin{equation}
+ r_d(\lambda,\mu)=\frac{z_\lambda}{z_\mu}
+ \qquad(q_d(\mu)=\lambda).
+ \label{eq:a007234-general-roots}
+\end{equation}
+
+Let \(\mathcal P\) be the set of prime divisors of \(d\), and define
+\begin{equation}
+ h_d(\lambda)=\sum_{p\in\mathcal P}
+   \max\{v_p(j):m_j(\lambda)>0\}.
+ \label{eq:a007234-height}
+\end{equation}
+For a source cycle of length \(\ell\) and its target length
+\(j=\ell/\gcd(\ell,d)\),
+\begin{equation}
+ v_p(j)=\max\{v_p(\ell)-v_p(d),0\}.
+ \label{eq:a007234-valuation}
+\end{equation}
+If a target type has a part not coprime to \(d\), then every reverse type has
+strictly larger \(h_d\): for at least one prime \(p\mid d\), a positive target
+valuation forces the corresponding source valuation to increase by
+\(v_p(d)\), while the maxima for other primes cannot decrease.  The reverse
+type graph is therefore acyclic away from types whose parts are all coprime to
+\(d\).
+
+For such a periodic type, put
+\begin{equation}
+ o_\lambda=\lcm\{j:m_j(\lambda)>0\},
+ \qquad
+ L_\lambda=\ord_{o_\lambda}(d).
+ \label{eq:a007234-general-period}
+\end{equation}
+The class splits into power-map cycles of length \(L_\lambda\); omitting the
+unique same-type predecessor and applying the same weighted-cycle formula
+computes the largest \(X\subseteq S_n\) satisfying
+\[
+ \sigma\in X\Longrightarrow \sigma^d\notin X.
+\]
+This gives an exact all-\(n\) recurrence for every fixed \(d\).  The generic
+implementation specializes to \cref{thm:a007234} for \(d=2\) and agrees with
+direct functional graphs for \(d=2,3,4,6\) through \(S_7\).

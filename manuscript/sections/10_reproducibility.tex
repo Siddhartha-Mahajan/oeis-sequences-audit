@@ -1,0 +1,33 @@
+\section{A convention-sensitive audit and reproducibility}
+\label{sec:reproducibility}
+
+\subsection{The discrepancy in \texorpdfstring{\seq{A323134}}{A323134}}
+
+For \seq{A323134}, an independent geometric enumerator agrees with the listed
+values through \(n=4\) and then gives
+\[
+ 3034,\ 64877,\ 1503790
+ \qquad(n=5,6,7),
+\]
+instead of the first two listed values 3031 and 64866.  The program counts
+simple closed straight-edge knight walks modulo translation, all eight square
+symmetries, cyclic starting point, and reversal, allowing collinear consecutive
+knight moves.  A separate Python recount verifies 58840 rooted representatives
+and 3034 equivalence classes at \(n=5\).  Because the historical convention on
+collinearity and equivalence may differ, this result is recorded as a
+definition-sensitive discrepancy rather than a proposed data correction.
+
+\subsection{Exact computational records}
+
+The exhaustive counting programs use integer or rational arithmetic.  Large
+searches are divided into disjoint branches or preserved as canonical records
+whose coverage and aggregate counts are checked separately.  The mixed-integer
+models for \seq{A075099} and \seq{A337433} contain only integral combinatorial
+data; their exactness claims use completed global optimization runs with zero
+gap, while separate solver-free checkers verify the displayed constructions.
+Incomplete optimization runs are not used as exactness claims.
+
+C++ enumerators use deterministic seeds where search order matters.  Each
+package states its mathematical reduction, replay command, and certificate
+boundary, and every distributed source, witness, and certificate is covered by
+the repository's SHA-256 manifest.

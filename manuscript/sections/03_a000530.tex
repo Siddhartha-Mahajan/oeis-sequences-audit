@@ -1,0 +1,125 @@
+\section{Run-composition formula for \texorpdfstring{\seq{A000530}}{A000530}}
+\label{sec:a000530}
+
+For a binary word \(w\), let \(c_s(w)\) be the number of occurrences of
+\(s\in\{0,1\}\), and let \(m_s(w)\) be the length of its longest run of
+\(s\).  The sequence \seq{A000530} counts first-hit words ending in zero: no
+proper prefix satisfies
+\[
+ c_0+m_0\ge 2n\qquad\text{or}\qquad c_1+m_1\ge2n,
+\]
+and the full word satisfies the zero condition.  Put \(N=2n-1\).  A word is
+\emph{safe} when
+\begin{equation}
+ c_s(w)+m_s(w)\le N\qquad(s=0,1).
+ \label{eq:a000530-safe}
+\end{equation}
+
+For \(r\ge1\), define
+\begin{equation}
+ q_N(r)=\#\left\{(x_1,\ldots,x_r)\in\Z_{>0}^r:
+       \sum_{i=1}^r x_i+\max_i x_i\le N\right\},
+ \label{eq:a000530-q}
+\end{equation}
+and set \(q_N(0)=1\).
+
+\begin{theorem}[Run-composition formula]
+\label{thm:a000530-run}
+For every \(n\ge1\),
+\begin{equation}
+ \boxed{
+ a(n)=1+\sum_{r\ge1}q_N(r)^2+
+          \sum_{r\ge0}q_N(r)q_N(r+1),\qquad N=2n-1.}
+ \label{eq:a000530-run}
+\end{equation}
+Both sums are finite; in fact \(q_N(r)=0\) for \(r\ge N\).
+\end{theorem}
+
+\begin{proof}
+Safe words form the internal vertices of a finite rooted binary tree, with the
+empty word at the root.  Appending either bit to a safe word either remains
+safe or produces a first hit.  If the tree has \(S_n\) internal vertices, then
+it has \(S_n+1\) terminal children.  Bit complementation is a fixed-point-free
+bijection between terminal words whose first hit is caused by zero and those
+whose first hit is caused by one.  Therefore
+\begin{equation}
+ a(n)=\frac{S_n+1}{2}.
+ \label{eq:a000530-leaves}
+\end{equation}
+
+A symbol appearing in exactly \(r\) runs has an ordered run-length vector
+\((x_1,\ldots,x_r)\).  Condition \cref{eq:a000530-safe} for that symbol is
+precisely the inequality in \cref{eq:a000530-q}.  A nonempty binary word has
+either the same number \(r\) of zero-runs and one-runs, with two choices of
+first symbol, or \(r+1\) runs of one symbol and \(r\) of the other, with two
+choices for the symbol having more runs.  Hence
+\[
+ S_n=1+2\sum_{r\ge1}q_N(r)^2+
+        2\sum_{r\ge0}q_N(r)q_N(r+1).
+\]
+Substitution in \cref{eq:a000530-leaves} proves
+\cref{eq:a000530-run}.
+
+Finally, every positive \(r\)-tuple has sum at least \(r\) and maximum at
+least one, so \(q_N(r)=0\) when \(r+1>N\); the slightly weaker statement
+\(q_N(r)=0\) for \(r\ge N\) suffices.
+\end{proof}
+
+\subsection{Explicit finite binomial sum}
+
+For integers \(r,m,T\), define
+\begin{equation}
+ B(r,m,T)=\sum_{j=0}^{r}(-1)^j\binom{r}{j}
+                         \binom{T-jm}{r},
+ \label{eq:a000530-B}
+\end{equation}
+where \(\binom{u}{r}=0\) if \(u<r\) or \(u<0\).
+
+\begin{proposition}
+\label{prop:a000530-q-explicit}
+For \(r\ge1\),
+\begin{equation}
+ q_N(r)=
+ \sum_{m=1}^{\lfloor(N-r+1)/2\rfloor}
+ \left(B(r,m,N-m)-B(r,m-1,N-m)\right).
+ \label{eq:a000530-q-explicit}
+\end{equation}
+Consequently, \cref{eq:a000530-run,eq:a000530-B,eq:a000530-q-explicit}
+form an explicit finite binomial-sum formula for \(a(n)\).
+\end{proposition}
+
+\begin{proof}
+Fix a possible maximum part \(m\).  The number of positive \(r\)-tuples with
+all parts at most \(m\) and total sum at most \(T\) equals \(B(r,m,T)\).
+Indeed, subtract one from each positive part, introduce a nonnegative slack
+variable for the unused total, and apply inclusion-exclusion to the \(r\)
+upper bounds.  The difference
+\(B(r,m,N-m)-B(r,m-1,N-m)\) therefore counts the tuples with maximum exactly
+\(m\) and total sum at most \(N-m\).  A positive \(r\)-tuple with maximum exactly \(m\) has total sum at least \(m+r-1\).  Hence it can occur only when \(2m+r-1\le N\), or \(m\le\lfloor(N-r+1)/2\rfloor\).  Summing over \(m\) gives \cref{eq:a000530-q-explicit}.
+\end{proof}
+
+\subsection{Finite-state cross-check}
+
+The state
+\[
+ (c_0,c_1,m_0,m_1,\text{last symbol},\text{current run length})
+\]
+determines every future transition and whether a predicate first becomes true.
+Equal states may therefore be merged with integer multiplicity.  The dynamic
+program is finite: if both symbols occur in a safe word, then
+\(c_s\le2n-2\) for each \(s\), so its length is at most \(4n-4\); constant
+safe words are shorter.  Thus exhausting the safe frontier is exact rather
+than cutoff-based.
+
+The run formula and the independent state dynamic program agree through
+\(n=50\), while literal word enumeration verifies the first five terms.  The
+formula begins
+\begin{equation*}
+\begin{aligned}
+1,&\ 5,\ 28,\ 226,\ 2077,\ 20770,\ 222884,\ 2529541,\\
+&29995812,\ 368025335,\ 4637331008,\ 59687103424,\\
+&781671686963,\ 10386703092609,\ 139745901077363,\ldots.
+\end{aligned}
+\end{equation*}
+The stored formula sample continues through \(n=100\); the all-\(n\) formula
+itself has no computational endpoint.

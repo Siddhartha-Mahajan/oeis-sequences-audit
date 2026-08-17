@@ -1,0 +1,123 @@
+\section{An Egyptian-fraction recursion for \texorpdfstring{\seq{A003167}}{A003167}}
+\label{sec:a003167}
+
+An integral \(n\)-dimensional cuboid with nondecreasing side lengths
+\(x_1\le\cdots\le x_n\) has volume
+\(\prod_i x_i\).  Its total facet hyperarea is
+\(2\sum_i\prod_{j\ne i}x_j\).  Equality of volume and total facet hyperarea is
+therefore equivalent to
+\begin{equation}
+ \frac1{x_1}+\cdots+\frac1{x_n}=\frac12.
+ \label{eq:a003167-egypt}
+\end{equation}
+Thus \seq{A003167} counts nondecreasing positive-integer solutions of
+\cref{eq:a003167-egypt}.
+
+For coprime integers \(p\ge0\), \(q\ge1\), an integer \(r\ge0\), and a lower
+bound \(L\ge1\), let
+\[
+ C(r,p,q,L)
+\]
+be the number of nondecreasing \(r\)-tuples
+\(L\le x_1\le\cdots\le x_r\) whose reciprocal sum is \(p/q\).
+Use the terminal conventions
+\[
+ C(0,0,1,L)=1,
+ \qquad
+ C(0,p,q,L)=0\quad(p>0),
+\]
+and \(C(r,0,1,L)=0\) for \(r>0\).  For \(r=1\), the value is one exactly
+when \(p>0\), \(p\mid q\), and \(q/p\ge L\).
+
+\begin{theorem}[Exact finite recursion]
+\label{thm:a003167-recursion}
+For \(r\ge2\) and \(p>0\),
+\begin{equation}
+ C(r,p,q,L)=
+ \sum_{x=\max\{L,\lfloor q/p\rfloor+1\}}^{\lfloor rq/p\rfloor}
+ C(r-1,p_x,q_x,x),
+ \label{eq:a003167-recursion}
+\end{equation}
+where \(p_x/q_x\) is the reduced form of
+\begin{equation}
+ \frac{px-q}{qx}.
+ \label{eq:a003167-residual}
+\end{equation}
+In particular,
+\begin{equation}
+ \boxed{\seq{A003167}(n)=C(n,1,2,1)}.
+ \label{eq:a003167-main}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Suppose \(x=x_1\) is the first denominator.  Since \(r-1\) positive
+reciprocals remain, the residual sum must be positive, so
+\(1/x<p/q\) and therefore \(x>q/p\).  Monotonicity also requires \(x\ge L\).
+On the other hand every reciprocal is at most \(1/x\), whence
+\(p/q\le r/x\), or \(x\le rq/p\).  These are exactly the finite bounds in
+\cref{eq:a003167-recursion}.  After choosing \(x\), subtracting \(1/x\)
+produces \cref{eq:a003167-residual}, and the remaining denominators are at
+least \(x\).  Every solution has a unique first denominator and every summand
+constructs valid solutions, proving the recursion.  Equation
+\cref{eq:a003167-main} is the reformulation
+\cref{eq:a003167-egypt}.
+\end{proof}
+
+\subsection{Two-denominator divisor terminal}
+
+When two denominators remain, the equation
+\[
+ \frac1x+\frac1y=\frac pq
+\]
+is equivalent to
+\begin{equation}
+ (px-q)(py-q)=q^2.
+ \label{eq:a003167-factor}
+\end{equation}
+Hence the terminal count can be obtained by enumerating divisors \(d\mid q^2\)
+and testing
+\begin{equation}
+ x=\frac{d+q}{p},
+ \qquad
+ y=\frac{q^2/d+q}{p},
+ \qquad
+ L\le x\le y.
+ \label{eq:a003167-terminal}
+\end{equation}
+This is an exact acceleration of \cref{eq:a003167-recursion}, not an added
+assumption.  The implementation uses deterministic integer factorization and
+protects the products in \(q^2\) with widened integer arithmetic.
+
+\subsection{The seventh term}
+
+\begin{resultbox}[Exact evaluation]
+\[
+ \boxed{\seq{A003167}(7)=155068098.}
+\]
+\end{resultbox}
+
+For \(n=7\), the first denominator lies in \(3\le x_1\le14\).  The expensive
+branch \(x_1=3\) was refined into the following disjoint pieces, each dictated
+by the same denominator bounds:
+\begin{align*}
+ &x_1=4,\ldots,14;\\
+ &x_1=3,\quad x_2=8,\ldots,36;\\
+ &x_1=3,\quad x_2=7,\quad x_3=44,\ldots,210;\\
+ &x_1=3,\quad x_2=7,\quad x_3=43,
+      \quad x_4=1807,\ldots,7224,
+\end{align*}
+with the last interval partitioned into consecutive subranges.  The
+aggregation checker verifies the embedded prefixes and ranges, proves that the
+\(x_4\)-subranges cover \([1807,7224]\) without gaps or overlaps, and sums 262
+branch counts.  Altogether the branches visit 151379115 recursion nodes and
+make 151271985 terminal pair calls.
+
+The same C++ recursion reproduces the known values
+\[
+ 2,\ 10,\ 108,\ 2892,\ 270332
+\]
+for \(n=2,\ldots,6\).  A separate Python implementation using exact rational
+recursion, without the factorization terminal, independently reproduces this
+prefix.  The theorem is all-dimensional; the branch computation supplies the
+new seventh numerical value.

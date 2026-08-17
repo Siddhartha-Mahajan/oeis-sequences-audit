@@ -1,0 +1,131 @@
+\section{Stable unlabelled unicyclic graphs: \texorpdfstring{\seq{A006545}}{A006545}}
+\label{sec:a006545}
+
+A graph is semistable at a vertex \(v\) when every automorphism of \(G-v\)
+preserves the former neighborhood of \(v\), and is stable when its vertices
+admit a deletion ordering in which the current graph is semistable at the next
+vertex.  McAvaney, Grant, and Holton proved that a connected unicyclic graph is
+stable if and only if its automorphism group contains a transposition
+\citep{McAvaneyGrantHolton1974,McAvaney1975}.  This characterization turns the
+enumeration into a local classification problem.
+
+\subsection{Rooted-tree series and decorated cycles}
+
+Let \(R(x)\) be the ordinary generating function for unlabelled rooted trees.
+The classical Pólya-Otter equation is
+\begin{equation}
+ R(x)=x\exp\left(\sum_{j\ge1}\frac{R(x^j)}{j}\right).
+ \label{eq:a006545-R}
+\end{equation}
+Let \(B(x)\) count rooted trees in which no vertex has two or more leaf
+children.  In the rooted-tree multiset construction, arbitrary multiplicity of
+leaf children contributes \((1-x)^{-1}\), while multiplicity zero or one
+contributes \(1+x\).  Replacing the former by the latter multiplies the rooted
+operator by \((1+x)(1-x)=1-x^2\), giving
+\begin{equation}
+ B(x)=x(1-x^2)\exp\left(\sum_{j\ge1}\frac{B(x^j)}{j}\right).
+ \label{eq:a006545-B}
+\end{equation}
+
+For a series \(F\) with \(F(0)=0\), let \(D(F)\) be the OGF for unoriented
+cycles of length at least three whose vertices carry \(F\)-objects.  Burnside's
+lemma for the dihedral group gives
+\begin{align}
+ D(F)&=\sum_{k\ge3}\frac{\operatorname{Rot}_k(F)+
+                              \operatorname{Ref}_k(F)}{2k},
+ \label{eq:a006545-D}\\
+ \operatorname{Rot}_k(F)&=\sum_{d\mid k}\varphi(d)F(x^d)^{k/d},
+ \label{eq:a006545-rot}\\
+ \operatorname{Ref}_{2m+1}(F)&=(2m+1)F(x)F(x^2)^m,
+ \label{eq:a006545-refodd}\\
+ \operatorname{Ref}_{2m}(F)&=m\left(F(x)^2F(x^2)^{m-1}+F(x^2)^m\right).
+ \label{eq:a006545-refeven}
+\end{align}
+Every connected unicyclic graph has a unique cycle, with a rooted tree attached
+at each cycle vertex.  Consequently \(D(R)\) counts all connected unlabelled
+unicyclic graphs.
+
+\subsection{Where a transposition can occur}
+
+\begin{lemma}[Twin classification]
+\label{lem:a006545-twins}
+If a connected unicyclic graph has an automorphism that transposes exactly two
+vertices \(u,v\), then the pair has exactly one of the following forms.
+\begin{enumerate}
+\item \(u,v\) are two leaf children of the same vertex;
+\item \(u,v\) are the two bare vertices of a triangle;
+\item \(u,v\) are opposite bare vertices of a 4-cycle.
+\end{enumerate}
+Conversely, each of these configurations yields a transposition.
+\end{lemma}
+
+\begin{proof}
+A transposition fixing every other vertex implies
+\[
+ N(u)\setminus\{v\}=N(v)\setminus\{u\};
+\]
+thus \(u,v\) are twins.  Suppose first that they are nonadjacent.  If they have
+one common neighbor, any additional incident edge would also be common and
+would create a second cycle, so they are sibling leaves.  If they have two
+common neighbors, the four vertices form the unique cycle, which is a 4-cycle,
+and the transposed vertices are bare.  Three common neighbors create at least
+two cycles.
+
+If \(u,v\) are adjacent, connectedness of a nontrivial unicyclic graph forces a
+common neighbor.  There can be exactly one: no common neighbor would isolate a
+\(K_2\) component, while two would create more than one cycle.  The pair is
+therefore the two bare vertices of a triangle.  In all three cases the indicated
+swap visibly preserves adjacency and fixes every other vertex.
+\end{proof}
+
+\subsection{The ordinary generating function}
+
+The difference \(D(R)-D(B)\) counts exactly the unicyclic graphs containing a
+pair of sibling leaves.  Among the remaining \(B\)-decorated cycles, a triangle
+transposition has two bare vertices and an arbitrary \(B\)-object at the third,
+contributing \(x^2B(x)\).  A 4-cycle transposition has two opposite bare
+vertices; the other opposite pair carries an unordered pair of \(B\)-objects,
+whose OGF is
+\[
+ \frac{B(x)^2+B(x^2)}{2}.
+\]
+The triangle and 4-cycle families are disjoint and contain no sibling-leaf
+transposition.
+
+\begin{theorem}[All-\(n\) OGF]
+\label{thm:a006545}
+The ordinary generating function for stable connected unlabelled unicyclic
+graphs is
+\begin{equation}
+ \boxed{
+ A(x)=D(R)-D(B)+x^2B(x)+
+       \frac{x^2}{2}\left(B(x)^2+B(x^2)\right),}
+ \label{eq:a006545-main}
+\end{equation}
+where \(R,B,D\) are determined by
+\cref{eq:a006545-R,eq:a006545-B,eq:a006545-D,eq:a006545-rot,eq:a006545-refodd,eq:a006545-refeven}.
+Thus \(a(n)=[x^n]A(x)\) for every \(n\ge3\).
+\end{theorem}
+
+\begin{proof}
+By the cited structural theorem, stability is equivalent to the existence of a
+transposition.  Lemma~\ref{lem:a006545-twins} partitions such graphs into those
+with sibling leaves and the two exceptional bare-cycle mechanisms.  The four
+terms in \cref{eq:a006545-main} count these disjoint classes exactly.
+\end{proof}
+
+The coefficients begin, with offset three,
+\[
+\begin{aligned}
+1,&\ 2,\ 3,\ 8,\ 22,\ 62,\ 176,\ 500,\ 1425,\ 4078,\\
+&11666,\ 33447,\ 95922,\ 275332,\ 790518,\ 2270963,\\
+&6525674,\ 18759532,\ldots.
+\end{aligned}
+\]
+The exact series code independently reproduces the total unicyclic counts
+through 12 vertices.  Complete graph6 enumerations of connected unlabelled
+\(n\)-vertex, \(n\)-edge graphs were checked in three ways: by the recursive
+stability definition, by direct automorphism-group sizes at every deletion
+state, and by the elementary transposition test of
+\cref{lem:a006545-twins}.  All three select the same records through
+\(n=12\).

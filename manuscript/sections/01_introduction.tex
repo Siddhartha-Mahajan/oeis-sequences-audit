@@ -1,0 +1,92 @@
+\section{Introduction}
+
+Short integer sequences often sit at an awkward boundary between structural
+combinatorics and finite computation.  A few initial terms may be accessible by
+direct enumeration, while the underlying objects admit symmetries, recursive
+constructions, or functional-graph decompositions that are not visible in the
+published data.  The On-Line Encyclopedia of Integer Sequences (OEIS)
+\citep{OEIS} is particularly valuable at this boundary: it records the numerical
+problem, its historical sources, and the point at which a new theorem or a
+certificate can materially change the entry.
+
+This paper develops five structural results and collects a larger set of exact
+computational advances.  Each principal result determines its sequence for
+every positive integer \(n\).  The proofs use several different organizing ideas:
+safe-prefix trees, Egyptian-fraction
+recursion, affine patching over Boolean cubes, unlabelled rooted-tree species,
+and weighted independent sets in functional graphs.
+
+\subsection{Principal results}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}>{\ttfamily}l X X@{}}
+\toprule
+Entry & Structural result & Consequences and checks \\
+\midrule
+A000530 & Finite binomial sum obtained from ordered run compositions in a safe-prefix tree. & Exact state dynamic program through \(n=50\) and literal word enumeration for small \(n\). \\
+A003167 & Finite recursion for nondecreasing solutions of \(\sum_i1/x_i=1/2\), with an exact divisor terminal. & \(a(7)=155068098\), certified by 262 disjoint branches. \\
+A005787 & Inclusion-exclusion recurrence from the last OR operation, with an EGF functional equation and product-sum solution. & \(a(6)=323041664\), \(a(7)=284820663040\), \(a(8)=578706325429760\). \\
+A006545 & OGF for stable unlabelled unicyclic graphs from rooted-tree series and a complete transposition classification. & Exact coefficients to arbitrary order; independent graph enumeration through 12 vertices. \\
+A007234 & Weighted conjugacy-type recurrence for maximum squaring-free subsets of \(S_n\). & Corrected \(a(7)=3390\), \(a(8)=29409\); extension to every fixed power map \(\sigma\mapsto\sigma^d\). \\
+\bottomrule
+\end{tabularx}
+\caption{The all-dimension results proved in this paper.}
+\label{tab:principal-results}
+\end{table}
+
+The all-\(n\) statements are mathematical identities or finite recurrences;
+their validity does not depend on a numerical cutoff.  Computation is used to
+evaluate the formulae, to verify implementations by structurally independent
+methods, and to certify selected finite terms.
+
+\subsection{Exact results and certificate types}
+
+The accompanying exact terms include minimally 2-edge-connected graphs,
+cutting centers of trees, free-monoid multiplication programs, triangular
+lattice labelings, simultaneous representations by two squares and two cubes,
+trapped knight paths, polygonal-number subset sums, and Hankel determinant
+extrema.
+
+Four certificate patterns recur throughout the paper.
+
+\begin{enumerate}
+\item \emph{Constructive witnesses.}  A compact object is checked directly,
+      such as a word, graph, labeling, or arithmetic representation.
+\item \emph{Disjoint exhaustive partitions.}  A large search is split into
+      branches whose union and pairwise disjointness are verified separately.
+\item \emph{Canonical exhaustive enumeration.}  Every candidate is generated,
+      a local defining property is checked, and canonical labeling removes
+      isomorphic duplicates.
+\item \emph{Optimization-assisted constructions.}  The full integer model is
+      included, while an independent checker verifies each displayed object.
+      Exact optimality is asserted only when the included model has a completed
+      global optimization record.
+\end{enumerate}
+
+These patterns separate the mathematical reduction from the expensive search.
+They also make clear whether a statement is an identity, an exact finite term,
+a correction, or a convention-sensitive discrepancy.
+
+\subsection{Notation and repository organization}
+
+Partitions are written either as tuples or in frequency notation
+\(\lambda=1^{m_1}2^{m_2}\cdots\), with
+\[
+  z_\lambda=\prod_{j\ge1}j^{m_j}m_j!.
+\]
+For a formal power series \(F\), the notation \([x^n]F\) denotes coefficient
+extraction.  All generating-function identities are identities of formal power
+series, so no analytic convergence is required.  Graphs are finite and simple
+unless otherwise stated.
+
+Every sequence identifier in the paper links to its OEIS entry.  Code,
+certificates, ancillary tables, and concise proposed OEIS edits are organized by
+identifier in the repository \repo.  The principal result classes use the following
+paths:
+\begin{itemize}[label={},leftmargin=1.2em]
+\item all-dimension theorems: \path{entries/all_n/AXXXXXX/};
+\item exact finite determinations: \path{entries/exact_terms/AXXXXXX/};
+\item convention audits: \path{entries/bound_progress/AXXXXXX/}.
+\end{itemize}

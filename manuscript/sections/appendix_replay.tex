@@ -1,0 +1,74 @@
+\section{Representative replay commands}
+\label{app:replay}
+
+Commands below are run from the repository root unless a subshell changes
+into an entry directory.  Most quick verifiers use only the Python standard
+library.  C++ sources use C++20 unless an entry README specifies C++17.
+
+\subsection{\texorpdfstring{All-\(n\)}{All-n} results}
+
+\begin{lstlisting}[style=repo]
+(cd entries/all_n/A000530 && \
+  python3 scripts/formula.py --max-n 50 \
+    --compare certificates/dp_n1_n50.json && \
+  python3 scripts/verify_bruteforce.py --max-n 5)
+
+(cd entries/all_n/A003167 && \
+  python3 scripts/aggregate_n7.py \
+    --input-dir certificates/branches \
+    --output build/n7_exact_certificate.json && \
+  python3 scripts/verify_certificate.py \
+    build/n7_exact_certificate.json)
+
+(cd entries/all_n/A005787 && \
+  python3 scripts/verify_recurrence.py && \
+  python3 scripts/verify_small_and_arithmetic.py)
+
+(cd entries/all_n/A006545 && \
+  python3 scripts/generating_function.py \
+    --max-n 100 --check \
+    --bfile build/sample_n3_n100.txt)
+
+(cd entries/all_n/A007234 && \
+  python3 scripts/verify_recurrence.py --through 50 && \
+  python3 scripts/verify_power_generalization.py)
+\end{lstlisting}
+
+\subsection{Exact finite results}
+
+\begin{lstlisting}[style=repo]
+(cd entries/exact_terms/A001072 && \
+  python3 scripts/verify_independent.py \
+    certificates/n15_graphs.g6)
+
+(cd entries/exact_terms/A002887 && \
+  python3 scripts/replay_all.py --certificates-only)
+
+(cd entries/exact_terms/A273354 && \
+  python3 scripts/verify_minimality_certificate.py)
+
+(cd entries/exact_terms/A363253 && \
+  python3 scripts/prove_a6_a7.py \
+    --output certificates/a6_a7_certificate.replay.json)
+
+(cd entries/exact_terms/A075099 && \
+  for f in certificates/n{7,8,9,10,12}_milp.json; do \
+    python3 scripts/verify_construction.py "$f"; \
+  done)
+
+(cd entries/exact_terms/A337433 && \
+  python3 scripts/verify_witness.py \
+    certificates/n7_milp.json)
+
+(cd entries/bound_progress/A323134 && \
+  python3 scripts/verify_n5.py)
+\end{lstlisting}
+
+\subsection{Archive integrity and manuscript build}
+
+\begin{lstlisting}[style=repo]
+sha256sum -c MANIFEST.sha256
+
+cd manuscript
+latexmk -pdf -interaction=nonstopmode main.tex
+\end{lstlisting}

@@ -1,0 +1,167 @@
+\section{Affine-slice recurrence for \texorpdfstring{\seq{A005787}}{A005787}}
+\label{sec:a005787}
+
+Consider an arrangement of \(n\) circles and identify its \(2^n\) regions with
+\(\{0,1\}^n\), where \(x_i\) records membership in circle \(i\).  A black-white
+coloring is a Boolean function.  Starting from the all-white coloring, the
+allowed operation on coordinate \(i\) either colors the whole circle black or
+reverses every color inside it.  Algebraically these are
+\begin{equation}
+ f\longmapsto f\lor x_i,
+ \qquad
+ f\longmapsto f\oplus x_i,
+ \label{eq:a005787-ops}
+\end{equation}
+where arithmetic for \(\oplus\) is over \(\F_2\).  This is the subset-coloring
+problem of Rubinstein, Shallit, and Szegedy
+\citep{RubinsteinShallitSzegedy1988}.
+
+Let \(F_n\) be the family of reachable functions and put
+\(a(n)=|F_n|\), with the auxiliary value \(a(0)=1\).  Let
+\(\operatorname{Aff}_n\) be the \(2^{n+1}\) affine functions on \(n\) variables.
+
+\subsection{The last-OR decomposition}
+
+For \(0\le i<n\), define
+\begin{equation}
+ E_i=\left\{f:
+ f|_{x_i=0}\in F_{n-1}
+ \text{ and }
+ f|_{x_i=1}\in\operatorname{Aff}_{n-1}
+ \right\}.
+ \label{eq:a005787-E}
+\end{equation}
+
+\begin{lemma}
+\label{lem:a005787-union}
+One has
+\begin{equation}
+ F_n=\bigcup_{i=0}^{n-1}E_i,
+ \qquad
+ |E_i|=2^n a(n-1).
+ \label{eq:a005787-union}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Choose the last OR operation in a construction.  If it is performed on
+coordinate \(i\), subsequent operations are XORs by coordinate functions.
+The \(x_i=0\) slice is therefore reachable in \(n-1\) variables and the
+\(x_i=1\) slice is affine.  A construction using no OR is itself affine and
+belongs to every \(E_i\).  Hence \(F_n\subseteq\bigcup_iE_i\).
+
+Conversely, suppose the zero-slice is \(g\in F_{n-1}\) and the one-slice is
+\(h=c\oplus\ell\), where \(\ell\) is linear in the remaining variables.
+Reachability is closed under XOR by a linear form.  Construct
+\(g\oplus\ell\), apply OR on coordinate \(i\), and then XOR by \(\ell\).
+The two slices are now \(g\) and \(1\oplus\ell\).  If \(c=0\), one final XOR
+by \(x_i\) changes only the one-slice and gives \(\ell\); if \(c=1\), no final
+step is needed.  Thus every element of \(E_i\) is reachable.
+
+There are \(a(n-1)\) choices for the zero-slice and \(2^n\) affine functions
+on the remaining \(n-1\) variables, proving the cardinality statement.
+\end{proof}
+
+Restriction to any collection of zero-coordinate faces preserves
+reachability: each operation restricts either to the corresponding operation in
+fewer variables or to the identity.
+
+\subsection{Multiple intersections}
+
+\begin{lemma}[Affine patching]
+\label{lem:a005787-intersection}
+For every \(I\subseteq\{0,\ldots,n-1\}\) with \(|I|=k\ge2\),
+\begin{equation}
+ \left|\bigcap_{i\in I}E_i\right|=2^{n+1}a(n-k).
+ \label{eq:a005787-intersection}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Take \(f\in\bigcap_{i\in I}E_i\).  For each \(i\in I\), the slice
+\(h_i=f|_{x_i=1}\) is affine, and the slices agree on every pairwise overlap.
+Any two compatible affine slices glue to a global affine function: their
+constant and linear coefficients agree on the common codimension-two face,
+and the two remaining coordinate coefficients are fixed by the respective
+slices.  Let \(h\) be the affine function obtained from two slices.  For a
+third \(k\in I\), the difference
+\(h|_{x_k=1}-h_k\) is affine on that slice and vanishes on its intersections
+with two distinct coordinate hyperplanes.  The zero set of a nonzero affine
+function over \(\F_2\) is a single affine hyperplane, so this difference is
+zero.  Repeating the argument shows that a unique global affine function \(h\)
+agrees with \(f\) wherever at least one selected coordinate is one.
+
+On the remaining face
+\[
+ Z_I=\{x:x_i=0\text{ for every }i\in I\},
+\]
+put \(q=f|_{Z_I}\).  By restriction, \(q\in F_{n-k}\).  Hence \(f\) determines
+a pair
+\[
+ (h,q)\in\operatorname{Aff}_n\times F_{n-k}.
+\]
+
+Conversely, given such a pair, define \(f=h\) off \(Z_I\) and \(f=q\) on
+\(Z_I\).  We prove by induction on \(k\) that \(f\in\bigcap_{i\in I}E_i\).
+Fix \(i\in I\).  The one-slice is affine.  Its zero-slice is the analogous
+patching construction in one fewer variable with selected set
+\(I\setminus\{i\}\).  When this set has one element, the converse part of
+\cref{lem:a005787-union} shows that the slice is reachable.  For larger sets,
+the induction hypothesis shows that the slice lies in the corresponding
+intersection and hence is reachable.  Thus \(f\in E_i\) for every \(i\in I\).
+The two constructions are inverse bijections.  Since
+\(|\operatorname{Aff}_n|=2^{n+1}\), \cref{eq:a005787-intersection} follows.
+\end{proof}
+
+\subsection{Recurrence and generating function}
+
+\begin{theorem}[All-\(n\) recurrence]
+\label{thm:a005787-recurrence}
+With \(a(0)=1\),
+\begin{equation}
+ \boxed{
+ a(n)=n2^n a(n-1)+2^{n+1}
+ \sum_{k=2}^{n}(-1)^{k+1}\binom{n}{k}a(n-k).}
+ \label{eq:a005787-recurrence}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Apply inclusion-exclusion to \(F_n=\bigcup_iE_i\).  The singleton terms use
+\(|E_i|=2^na(n-1)\), and every \(k\)-fold intersection with \(k\ge2\) has the
+cardinality in \cref{eq:a005787-intersection}.  There are \(\binom nk\)
+intersections of size \(k\), giving \cref{eq:a005787-recurrence}.
+\end{proof}
+
+Let
+\[
+ A(x)=\sum_{n\ge0}a(n)\frac{x^n}{n!}.
+\]
+Multiplying \cref{eq:a005787-recurrence} by \(x^n/n!\), summing over \(n\),
+and collecting the binomial convolution gives the formal functional equation
+\begin{equation}
+ \boxed{A(x)=1+2\bigl(1-x-e^{-2x}\bigr)A(2x).}
+ \label{eq:a005787-egf}
+\end{equation}
+Set \(C(x)=2(1-x-e^{-2x})\).  Since \(C(0)=0\), iterating
+\cref{eq:a005787-egf} is coefficientwise legitimate in \(\Q[[x]]\) and yields
+\begin{equation}
+ \boxed{
+ A(x)=\sum_{m\ge0}\prod_{j=0}^{m-1}C(2^jx)
+ =\sum_{m\ge0}2^m\prod_{j=0}^{m-1}
+ \left(1-2^jx-e^{-2^{j+1}x}\right).}
+ \label{eq:a005787-product}
+\end{equation}
+The empty product is one, and the \(m\)-th summand has valuation at least
+\(m\), so only finitely many summands affect any coefficient.
+
+The recurrence begins
+\[
+ 2,\ 8,\ 112,\ 5856,\ 869824,\ 323041664,
+ \ 284820663040,\ 578706325429760,\ldots.
+\]
+An explicit construction of all small intersection sets verifies
+\cref{eq:a005787-intersection} through four variables.  A separate C++
+enumerator independently obtains the complete six-circle count and its
+intersection table.  Exact recurrence arithmetic through \(n=20\) agrees with
+the preserved certificate.

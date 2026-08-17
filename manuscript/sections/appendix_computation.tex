@@ -1,0 +1,103 @@
+\section{Computational certificate details}
+\label{app:computation}
+
+\subsection{Independent implementations for \texorpdfstring{all-\(n\)}{all-n} formulae}
+
+For \seq{A000530}, one implementation evaluates the binomial sum of
+\cref{thm:a000530-run,prop:a000530-q-explicit}; the other propagates compressed
+safe-prefix states.  These methods share only the sequence definition and
+agree through \(n=50\).  Literal uncompressed enumeration checks \(n\le5\).
+
+For \seq{A005787}, the recurrence checker explicitly constructs every
+reachable function and every last-OR intersection through four variables.  A
+separate compiled enumerator computes the complete six-circle reachable set
+and the intersection cardinalities used in inclusion-exclusion.
+
+For \seq{A006545}, the series implementation is checked against complete
+unlabelled graph files through 12 vertices.  One verifier applies the recursive
+semistability definition, a second compares automorphism-group cardinalities,
+and a third tests the transposition classification of
+\cref{lem:a006545-twins} directly.
+
+For \seq{A007234}, the partition recurrence is compared with three complete
+functional-graph algorithms on permutations.  The root-fiber checker exhausts
+all permutations through \(S_7\), groups every square root by source and target
+cycle type, and verifies \(z_\lambda/z_\mu\) for each nonempty fiber.  The
+generic power-map verifier repeats the direct comparison for exponents
+\(2,3,4,6\).
+
+\subsection{The \texorpdfstring{\seq{A003167}}{A003167} branch certificate}
+
+The large \(n=7\) Egyptian-fraction computation is archived as 262 text
+records.  Every record stores its fixed denominator prefix, its permitted range
+for the next denominator, the branch count, the number of recursion nodes, and
+the number of terminal pair calls.  The aggregation checker performs four
+independent tasks:
+
+\begin{enumerate}
+\item recompute the legal interval at each fixed prefix from
+      \cref{eq:a003167-recursion};
+\item verify that the top-level pieces cover \(x_1=3,\ldots,14\) exactly;
+\item verify that the exceptional \(x_4\)-ranges at prefix
+      \((3,7,43)\) are consecutive from 1807 through 7224;
+\item sum the branch counts and diagnostics to the final total.
+\end{enumerate}
+
+This separates the expensive enumeration from the inexpensive proof that no
+branch was omitted or counted twice.  The final JSON certificate preserves the
+entire partition summary and its exact aggregate
+\(155068098\).
+
+\subsection{Cutting-center profile search}
+
+For \seq{A002887}, the profile search does not enumerate unlabelled trees.  It
+enumerates the complete numerical data forced by a center path: the positive
+composition \((b_i)\), the off-path partition square sums \(q_i\), and the
+common constant \(K\) in \cref{eq:a002887-profile}.  The safe-rooted-subtree
+DP then proves realizability while excluding any off-path vertex tied with the
+center.  The inequalities used to prune three consecutive path components are
+necessary conditions from the Harary--Ostrand analysis, not heuristic cuts.
+Accepted profiles are converted to concrete edge lists, so the final
+certificate checker is independent of the profile equations.
+
+\subsection{Canonical graph records}
+
+The \seq{A001072} archive contains all 41142 canonical graph6 records at order
+15, a SHA-256 file, generator logs, and an independent verification log.  The
+generator and verifier use different minimal 2-edge-connectivity tests.  A
+second nauty canonicalization pass leaves both count and hash unchanged.
+
+The \seq{A006545} graph files similarly separate all unicyclic records from the
+stable subset at each order.  The certificate is therefore not only a count:
+it preserves the exact selected isomorphism classes and permits direct set
+comparison between alternative characterizations.
+
+\subsection{Arithmetic minimality for \texorpdfstring{\seq{A273354}}{A273354}}
+
+The minimality certificate records every cubic scaling of a primitive
+three-cube value below \(N_0\), together with a complete prime factorization.
+The verifier does not trust the stored arithmetic.  It checks the source
+primitive index, reconstructs each scaling, proves every recorded prime by
+deterministic 64-bit Miller--Rabin, multiplies the factorization back to the
+candidate, and recalculates \(r_2^+\).  It also directly scans the cube
+representations of \(N_0\).
+
+The only external completeness input is the primitive \seq{A003825} b-file
+through \(N_0\).  As an independent consistency test, cubic multiples of that
+list reproduce the first 100000 values of the supplied \seq{A018787} b-file
+without omissions or extras.
+
+\subsection{Exact optimization certificates}
+
+The \seq{A075099} and \seq{A337433} folders contain complete mixed-integer
+models and terminal solver records with coincident primal and dual bounds.
+The zero gaps certify global optimality.  Independent solver-free checkers
+validate the intermediate-word programs for \seq{A075099} and the
+triangular-lattice labeling for \seq{A337433}; these witnesses establish the
+matching feasible values without relying on the optimizer's internal object
+format.
+
+For \seq{A075099}, the exact certificates cover \(n=7,8,9,10,12\).  The stored
+\(n=11\) run has a nonzero gap and is not used to assert an exact value.  For
+\seq{A337433}, the \(n=7\) record terminates with objective and best bound both
+equal to 87 after 53115 branch-and-bound nodes.
