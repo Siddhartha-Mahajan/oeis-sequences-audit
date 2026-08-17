@@ -1,31 +1,22 @@
-# All-n results: priority order
+# All-$n$ results
 
-This folder contains exact formulas, recurrences, or generating functions
-that determine the relevant sequence in every dimension. The order below is
-a judgment of mathematical and OEIS importance, giving extra weight to
-corrections of the published record, closure of a genuinely open sequence,
-and independently checkable proofs.
+These packages contain finite formulas, exact recurrences, or generating
+functions that determine the relevant sequence for every admissible index.
+The order below is a suggested submission priority.
 
-1. **A007234 — very high importance.** An exact conjugacy-type recurrence
-   corrects two published terms (`a(7)` and `a(8)`), determines every term,
-   and resolves the discrepancy by three independent direct
-   implementations. This should be submitted first because the current OEIS
-   DATA appear wrong.
-2. **A005787 — very high importance.** The intersection theorem gives an
-   exact recurrence for every `n`, proves the first missing values, and turns
-   a short hard sequence into a completely computable one. Its simple
-   inclusion--exclusion structure makes it a strong standalone result.
-3. **A006545 — high importance.** A structural theorem yields an exact
-   all-`n` ordinary generating function and a long extension. It effectively
-   closes the enumeration problem, with several independent finite checks.
-4. **A000530 — high importance.** A finite binomial-sum formula determines
-   every term and is independently audited by exact dynamic programming.
-   It is substantial, although it does not correct existing DATA.
+1. **A007234.** An exact recurrence on conjugacy types corrects the published
+   values at `n=7,8`, determines every term, and extends to the maximum
+   `sigma -> sigma^d`-free subset problem for every fixed `d>=2`.
+2. **A005787.** A last-OR intersection theorem gives an exact recurrence, an
+   exponential generating-function equation, and a formal product-sum.
+3. **A006545.** A structural transposition classification and dihedral cycle
+   index give an exact ordinary generating function for stable unicyclic
+   graphs.
+4. **A000530.** A run-composition argument gives a finite binomial formula,
+   independently checked by an exact finite-state dynamic program.
+5. **A003167.** A bounded Egyptian-fraction recursion counts all integral
+   cuboids with volume equal to surface area and yields the exact seventh term.
 
-The ranking is a submission priority, not a claim that one theorem is
-intrinsically more valuable than another.
-
-For A000530, A006545, and A007234, the submission b-file is intended to
-contain 10,000 terms. A005787 is the deliberate exception: its integers grow
-too quickly for such a file to be useful, so its b-file stops at `n=20`.
-These file endpoints are not limits of the all-`n` theorems.
+The stored finite tables are audit samples rather than limits of the theorems.
+A005787 deliberately uses a short b-file because its terms grow unusually
+quickly.

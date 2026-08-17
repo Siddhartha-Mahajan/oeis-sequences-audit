@@ -7,15 +7,13 @@ unlabeled unicyclic graphs.  It extends the published data by
 a(9)=176, a(10)=500, a(11)=1425, a(12)=4078,
 ```
 
-The stored coefficient table through `n=100` is a verification sample. The
-same exact series code writes the submission b-file; its intended endpoint is
-`n=10000`.
+The stored coefficient table through `n=100` is a verification sample and a
+suitable source for a compact b-file.
 
 Quick exact replay:
 
 ```bash
 python3 scripts/generating_function.py --max-n 100 --check --bfile build/sample_n3_n100.txt
-python3 scripts/generating_function.py --max-n 10000 --bfile build/b006545.txt
 ```
 
 Independent finite replay through `n=12`:

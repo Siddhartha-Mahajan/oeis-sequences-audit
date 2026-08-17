@@ -20,7 +20,7 @@ python3 scripts/verify_recurrence.py --through 50
 
 The stored values through `n=50` are a verification sample, not the claimed
 limit of the recurrence. The exact recurrence determines every term. The
-submission b-file target is 10,000 terms.
+stored b-file is kept to the verified range through `n=50`.
 
 Direct permutation replay through `n=9`:
 
@@ -34,3 +34,7 @@ python3 scripts/verify_witness.py 8 certificates/n8_selected_ranks.txt 29409
 
 See [`MANUSCRIPT.md`](MANUSCRIPT.md) for the proof and
 [`OEIS_EDITS.md`](OEIS_EDITS.md) for concise submission text.
+
+The same conjugacy-type method now includes every fixed power map
+`sigma -> sigma^d`; see `POWER_MAP_GENERALIZATION.md`. The generic verifier
+compares exponents `2,3,4,6` with direct functional graphs through `S_7`.

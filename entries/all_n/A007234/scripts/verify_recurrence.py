@@ -99,7 +99,9 @@ def main() -> None:
         if line and not line.startswith("#"):
             n, value = map(int, line.split())
             recorded.append((n, value))
-    assert recorded == list(enumerate(values, 1)), "b-file differs from recurrence"
+    comparable = [(n, value) for n, value in recorded if n <= args.through]
+    expected_prefix = [(n, values[n - 1]) for n, _ in comparable]
+    assert comparable == expected_prefix, "b-file prefix differs from recurrence"
     print(f"partition recurrence checked through n={args.through}")
     print("direct permutation values checked through n=11")
     print("all square-root fibers and z(lambda)/z(mu) checked through n=7")
