@@ -4,7 +4,6 @@ This folder proves an all-`n` formula for A000530. An exact finite-state
 dynamic program independently checks the formerly unknown terms `a(9)` through
 `a(50)`. See
 [MANUSCRIPT.md](MANUSCRIPT.md) for the proof and trust boundary and
-[OEIS_EDITS.md](OEIS_EDITS.md) for concise proposed entry edits.
 
 It also proves a finite binomial-sum formula valid for every positive `n`; see
 [ALL_N_FORMULA.md](ALL_N_FORMULA.md). The formula and the independently

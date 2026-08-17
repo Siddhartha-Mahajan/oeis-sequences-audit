@@ -100,7 +100,8 @@
   showstringspaces=false
 }
 
-\newcommand{\seq}[1]{\href{https://oeis.org/#1}{\texttt{#1}}}
+\newcommand{\seq}[1]{\mbox{\href{https://oeis.org/#1}{#1}}}
+\newcommand{\seqbold}[1]{\mbox{\href{https://oeis.org/#1}{\textbf{#1}}}}
 \newcommand{\repo}{\url{https://github.com/Siddhartha-Mahajan/oeis-sequences-audit}}
 \newcommand{\pathcode}[1]{\texttt{\detokenize{#1}}}
 \newcommand{\F}{\mathbb{F}}
@@ -144,9 +145,9 @@
   \small
   \textbf{Abstract.}
   We give exact all-dimension formulae or recurrences for five short and difficult
-  entries of the On-Line Encyclopedia of Integer Sequences: \seq{A000530},
-  \seq{A003167}, \seq{A005787}, \seq{A006545}, and
-  \seq{A007234}.  The methods combine run-composition counting, finite
+  entries of the On-Line Encyclopedia of Integer Sequences: \seqbold{A000530},
+  \seqbold{A003167}, \seqbold{A005787}, \seqbold{A006545}, and
+  \seqbold{A007234}.  The methods combine run-composition counting, finite
   Egyptian-fraction recursion, affine-slice
   inclusion-exclusion, unlabelled cycle constructions, and weighted dynamic
   programming on permutation power-map functional graphs.  The last method
@@ -155,9 +156,9 @@
   entries.  Each computational statement is paired
   with an explicit witness, an exhaustive partition of the search, or an exact
   arithmetic checker.  In particular, the
-  results include corrected values for \seq{A007234} and \seq{A002887}, the
-  exact value \(\seq{A003167}(7)=155068098\), five exact values of
-  \seq{A075099}, and \(\seq{A337433}(7)=87\).
+  results include corrected values for \seqbold{A007234} and \seqbold{A002887}, the
+  exact value \(\seqbold{A003167}(7)=155068098\), five exact values of
+  \seqbold{A075099}, and \(\seqbold{A337433}(7)=87\).
 
   \vspace{0.55em}
   \textbf{Keywords:} integer sequences; exact enumeration; Burnside's lemma;
@@ -192,11 +193,10 @@
 
 \section*{Data and code availability}
 \addcontentsline{toc}{section}{Data and code availability}
-All source code, exact certificates, witness files, ancillary values, proposed
-OEIS edits, and the LaTeX source of this manuscript are available in the public
-repository:
+The public repository contains all source code, exact certificates, witness
+files, ancillary values, and the LaTeX source of this manuscript.
 \begin{center}
-\repo
+{\footnotesize\repo}
 \end{center}
 The archive includes a SHA-256 manifest covering every packaged source and
 certificate file.

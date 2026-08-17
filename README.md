@@ -3,8 +3,8 @@
 This repository collects exact formulas, recurrences, corrected terms,
 certified finite computations, and one-sided bounds for difficult short
 sequences in the On-Line Encyclopedia of Integer Sequences. Each entry folder
-contains a mathematical note, proposed OEIS edits, source code, and the
-certificate or witness needed to replay the stated result.
+contains a mathematical note, source code, and the certificate or witness
+needed to replay the stated result.
 
 The combined paper is available as
 [All-$n$ Formulae and Certified Advances for Difficult OEIS Sequences](manuscript/oeis_sequence_advancements.pdf).
@@ -45,7 +45,7 @@ hence `a(8)>=78321920095`.
 | [A323560](entries/exact_terms/A323560/MANUSCRIPT.md) | `a(19)=36001752` | exact exhaustive enumeration |
 | [A337433](entries/exact_terms/A337433/MANUSCRIPT.md) | `a(7)=87` | exact zero-gap MILP and independently verified labeling |
 | [A363253](entries/exact_terms/A363253/MANUSCRIPT.md) | `a(6)=a(7)=-1` | conductor proof and finite-prefix certificates |
-| [A368355](entries/exact_terms/A368355/MANUSCRIPT.md) | exact signed extrema at `n=6` for A368353--A368355 | exhaustive enumeration |
+| [A368355](entries/exact_terms/A368355/MANUSCRIPT.md) | exact signed extrema at `n=6` for A368353–A368355 | exhaustive enumeration |
 
 ## One-sided bounds and finite progress
 
@@ -80,5 +80,4 @@ sha256sum -c MANIFEST.sha256
 ```
 
 The live OEIS comparison used when assembling the package is recorded in
-[LIVE_OEIS_AUDIT.md](LIVE_OEIS_AUDIT.md). Proposed entry text is contained in
-each `OEIS_EDITS.md` file.
+[LIVE_OEIS_AUDIT.md](LIVE_OEIS_AUDIT.md).

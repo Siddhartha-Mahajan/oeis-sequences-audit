@@ -33,5 +33,4 @@ build/verify_group_counts 1425 certificates/unicyclic_n11.g6
 build/verify_group_counts 4078 certificates/unicyclic_n12.g6
 ```
 
-See [`MANUSCRIPT.md`](MANUSCRIPT.md) for the proof and
-[`OEIS_EDITS.md`](OEIS_EDITS.md) for concise submission text.
+See [`MANUSCRIPT.md`](MANUSCRIPT.md) for the proof.

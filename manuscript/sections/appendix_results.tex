@@ -5,11 +5,11 @@ Every entry is stored under its OEIS identifier in
 \path{entries/all_n/} or \path{entries/exact_terms/}.  The
 convention-sensitive \seq{A323134} audit remains under
 \path{entries/bound_progress/}.  The table records the results treated in this
-article; the \seq{A368353}--\seq{A368355} computation is stored in the
+article; the \seq{A368353}\textendash\seq{A368355} computation is stored in the
 \seq{A368355} folder.
 
 \small
-\begin{longtable}{@{}>{\raggedright\arraybackslash\ttfamily}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.64\textwidth}@{}}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.64\textwidth}@{}}
 \caption{Result and certificate map for every entry in the archive.}\label{tab:result-map}\\
 \toprule
 Entry & Result class & Principal statement \\
@@ -46,7 +46,7 @@ A323560 & exact &
 \(a(19)=36001752\), trapped self-avoiding knight paths. \\
 A363253 & exact &
 \(a(6)=a(7)=-1\), by conductor and finite-prefix arguments. \\
-A368353--\newline A368355 & exact &
+A368353\textendash\newline A368355 & exact &
 At \(n=6\): \(-2579770,2256911,2579770\), exact Hankel determinant extrema. \\
 A075099 & exact &
 \(a(7)=151\), \(a(8)=276\), \(a(9)=556\), \(a(10)=1066\), and \(a(12)=4171\). \\
@@ -58,8 +58,6 @@ Independent counts \(3034,64877,1503790\) at \(n=5,6,7\); no data edit asserted.
 \end{longtable}
 \normalsize
 
-Each listed entry folder contains a mathematical note and a README.  Where a direct
-OEIS submission is appropriate, concise proposed changes appear in an
-\path{OEIS_EDITS.md} or \path{OEIS_EDIT.md} file.  Witnesses and preserved
-outputs are under \path{certificates/}; regenerations and temporary binaries are
-kept under \path{build/}.
+Each listed entry folder contains a mathematical note and a README.  Witnesses
+and preserved outputs are under \path{certificates/}; regenerations and
+temporary binaries are kept under \path{build/}.

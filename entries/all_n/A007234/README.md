@@ -32,8 +32,7 @@ python3 scripts/component_dp.py 9
 python3 scripts/verify_witness.py 8 certificates/n8_selected_ranks.txt 29409
 ```
 
-See [`MANUSCRIPT.md`](MANUSCRIPT.md) for the proof and
-[`OEIS_EDITS.md`](OEIS_EDITS.md) for concise submission text.
+See [`MANUSCRIPT.md`](MANUSCRIPT.md) for the proof.
 
 The same conjugacy-type method now includes every fixed power map
 `sigma -> sigma^d`; see `POWER_MAP_GENERALIZATION.md`. The generic verifier

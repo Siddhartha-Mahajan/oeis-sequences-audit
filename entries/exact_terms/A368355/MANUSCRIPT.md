@@ -1,4 +1,4 @@
-# A368353-A368355 at n=6: exact Hankel determinant extrema
+# A368353–A368355 at n=6: exact Hankel determinant extrema
 
 ## Results
 
